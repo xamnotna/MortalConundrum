@@ -89,4 +89,7 @@
 *.log filter=lfs diff=lfs merge=lfs -text
 *.dwlt filter=lfs diff=lfs merge=lfs -text
 *.settings filter=lfs diff=lfs merge=lfs -text
+'*.bin' filter=lfs diff=lfs merge=lfs -text
+'*.bin filter=lfs diff=lfs merge=lfs -text
+'*.bin's filter=lfs diff=lfs merge=lfs -text
 *.sample filter=lfs diff=lfs merge=lfs -text
