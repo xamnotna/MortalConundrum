@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+# MortalConundrum
+isometric 2d game made in Unity
+made by Vik and Anton
+
+=======
 version https://git-lfs.github.com/spec/v1
-oid sha256:04f79e86555e2373b931a77efaf29723b06c15a0db53db453d1b9cb577a3f067
-size 208
+oid sha256:f97d98badfb97945139c80a51ba9063c164a7405b56bfcadab679370939625a2
+size 50
+>>>>>>>  
