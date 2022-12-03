@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2de052b2a0c1fceed54f6ec727ed77157a1b5dc5493f7ccb75da7e893888ce1c
-size 793
+using UnityEngine;
+
+public struct Bounds2D
+{
+    private float minX;
+    private float minY;
+    private float maxX;
+    private float maxY;
+
+    public Bounds2D(Bounds bounds)
+    {
+        Vector2 min = bounds.min;
+        Vector2 max = bounds.max;
+        minX = min.x;
+        minY = min.y;
+        maxX = max.x;
+        maxY = max.y;
+    }
+
+    public bool Intersects(Bounds2D otherBounds)
+    {
+        if (minX > otherBounds.maxX || otherBounds.minX > maxX)
+            return false;
+
+        // If one rectangle is above other 
+        if (maxY < otherBounds.minY || otherBounds.maxY < minY)
+            return false;
+
+        return true;
+    }
+
+    public override string ToString()
+    {
+        return "Min: (" + minX + ", " + minY + ")  Max: (" + maxX + ", " + maxY + ")";
+    }
+}
