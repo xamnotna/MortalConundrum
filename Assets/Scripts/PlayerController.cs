@@ -7,7 +7,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 3.0f;
 
     public int maxHealth = 100;
-    public int currentHealth;
+
+   public int health { get { return currentHealth; } }
+    int currentHealth;
 
     Rigidbody2D rigidbody2d ;
     float horizontalInput;
@@ -17,7 +19,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbody2d  = GetComponent<Rigidbody2D>();
-
         currentHealth = maxHealth;
     }
 
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
         position.x = position.x + speed * horizontalInput * Time.deltaTime;
         position.y = position.y + speed * verticalInput * Time.deltaTime;
 
-        rigidbody2d .MovePosition(position);
+        rigidbody2d.MovePosition(position);
     }
 
     public void ChangeHealth(int amount)
