@@ -19,11 +19,8 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Vector2 lookDirection = new Vector2(1, 0);
     // lastMoveDir is used to store the last direction the player was moving in
-    Vector3 lastMoveDir = Vector3.zero;
+    //Vector3 lastMoveDir = Vector3.zero;
 
-
-
-    //private Vector3 lastMoveDir = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
