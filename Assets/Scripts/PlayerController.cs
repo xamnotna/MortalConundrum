@@ -25,10 +25,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rigidbody2d  = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        rigidbody2d  = GetComponent<Rigidbody2D>();
+        
         currentHealth = maxHealth;
     }
 
@@ -38,51 +38,37 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        
-// move 8 directions
-
-
   
-         Vector2 move = new Vector2(horizontalInput, verticalInput);
+        // Vector2 move = new Vector2(horizontalInput, verticalInput);
+        Vector3 directionVector = new Vector3(horizontalInput, verticalInput, 0);
+        
 
-        if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
-        {
-            lookDirection.Set(move.x, move.y);
-            lookDirection.Normalize();
-        }
+        // if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
+        // {
+        //     lookDirection.Set(move.x, move.y);
+        //     lookDirection.Normalize();
+        // }
 
-        if (move.x < 0)
+        if (directionVector.x < 0)
         {
             spriteRenderer.flipX = false;
         }
-        else if (move.x > 0)
+        else if (directionVector.x > 0)
         {
             spriteRenderer.flipX = true;
         }
 
+        
         animator.SetFloat("xMove", lookDirection.x);
         animator.SetFloat("yMove", lookDirection.y);
-        animator.SetFloat("Speed", move.magnitude);
+        animator.SetFloat("Speed", directionVector.magnitude);
 
-
-        
+        Debug.Log("x: " + lookDirection.x + " " +  "y: " + lookDirection.y);
 
     } 
 
 
 
-
-/* void UpdateAnimDir ( )
-    {
-        if (lastMoveDir != Vector3.zero)
-        {
-            animator.SetFloat("xMove", lastMoveDir.x);
-            animator.SetFloat("yMove", lastMoveDir.y);
-
-        }
-    }
-
-     */
 
     void FixedUpdate()
     {
