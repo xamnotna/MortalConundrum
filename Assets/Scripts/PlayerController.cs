@@ -39,15 +39,15 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
 
   
-        // Vector2 move = new Vector2(horizontalInput, verticalInput);
+        // Vector2 directionVector = new Vector2(horizontalInput, verticalInput);
         Vector3 directionVector = new Vector3(horizontalInput, verticalInput, 0);
         
 
-        // if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
-        // {
-        //     lookDirection.Set(move.x, move.y);
-        //     lookDirection.Normalize();
-        // }
+        if (!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f))
+        {
+            lookDirection.Set(directionVector.x, directionVector.y);
+            lookDirection.Normalize();
+        }
 
         if (directionVector.x < 0)
         {
