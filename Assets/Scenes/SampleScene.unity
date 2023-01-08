@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028664020}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
@@ -2231,7 +2231,7 @@ PrefabInstance:
     - target: {fileID: 406589771757041689, guid: 0bfd6e5d98adeb24b9e5e6b5f080981a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 62fc2495fcfd6524b9857318572cf0f8, type: 2}
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bfd6e5d98adeb24b9e5e6b5f080981a, type: 3}
 --- !u!1001 &830711287840085169
@@ -2342,6 +2342,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1889118835, guid: 389674adc11a5d54797ee4bd63f15680, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889118835, guid: 389674adc11a5d54797ee4bd63f15680, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1889118838, guid: 389674adc11a5d54797ee4bd63f15680, type: 3}
       propertyPath: renderersToSort.Array.size
       value: 1

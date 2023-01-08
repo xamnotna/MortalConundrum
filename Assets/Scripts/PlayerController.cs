@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 100;
 
    public int health { get { return currentHealth; } }
-    int currentHealth;
+    public int currentHealth; //test remove later public to make it private
 
     Rigidbody2D rigidbody2d ;
     float horizontalInput;
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("yMove", lookDirection.y);
         animator.SetFloat("Speed", directionVector.magnitude);
 
-        Debug.Log("x: " + lookDirection.x + " " +  "y: " + lookDirection.y);
+       // Debug.Log("x: " + lookDirection.x + " " +  "y: " + lookDirection.y);
 
     } 
 
