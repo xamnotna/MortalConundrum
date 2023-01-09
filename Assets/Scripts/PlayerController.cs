@@ -63,9 +63,37 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("yMove", lookDirection.y);
         animator.SetFloat("Speed", directionVector.magnitude);
 
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+        if (hit.collider != null)
+        {
+            NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+            if (character != null)
+            {
+                character.DisplayDialog();
+            } 
+
+            
+        } 
+        
+
        // Debug.Log("x: " + lookDirection.x + " " +  "y: " + lookDirection.y);
 
+
     } 
+
+    // void Interact()
+    // {
+    //     //RaycastHit2D hit = Physics2D.Raycast(transform.position, lookDirection, 1.5f, LayerMask.GetMask("Interactable"));
+    //     RaycastHit2D hit = Physics2D.Raycast(transform.position, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+    //     if (hit.collider != null)
+    //     {
+    //         NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+    //         if (character != null)
+    //         {
+    //         character.DisplayDialog();
+    //         }  
+    //     }
+    // }
 
 
 
