@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 62fc2495fcfd6524b9857318572cf0f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,13 +140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   maxHealth: 100
-  frameRate: 0
-  nSprites:
-  - {fileID: 233558403, guid: 08019910aa383d84aaf1c4ad905a0fd4, type: 3}
-  neSprites: []
-  eSprites: []
-  seSprites: []
-  sSprites: []
 --- !u!114 &1889118838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +158,8 @@ MonoBehaviour:
   SorterPositionOffset: {x: 0, y: 0, z: 0}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort: []
+  useSortingGroup: 0
+  sortingGroup: {fileID: 0}
 --- !u!95 &678457750
 Animator:
   serializedVersion: 5
