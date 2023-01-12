@@ -18,8 +18,9 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
     Vector2 lookDirection = new Vector2(1, 0);
+
     // lastMoveDir is used to store the last direction the player was moving in
-    //Vector3 lastMoveDir = Vector3.zero;
+   Vector2 lastMoveDir = new Vector2(1, 0);
 
 
     // Start is called before the first frame update
@@ -35,19 +36,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /* if (DialogManager.isActive == true)
+        {
+            return;
+        } */
+  
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
   
-        // Vector2 directionVector = new Vector2(horizontalInput, verticalInput);
-        Vector3 directionVector = new Vector3(horizontalInput, verticalInput, 0);
-        
+         Vector2 directionVector = new Vector2(horizontalInput, verticalInput);
+        //Vector directionVector = new Vector3(horizontalInput, verticalInput, 0.0f);
+      
+
+        //Vector2 lookDirection = new Vector2(directionVector.x, directionVector.y);
 
         if (!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f))
         {
             lookDirection.Set(directionVector.x, directionVector.y);
             lookDirection.Normalize();
         }
+    
+
 
         if (directionVector.x < 0)
         {
@@ -58,48 +69,33 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
         }
 
+        // if DialogManager.isActive == true then stop player from walking
+
+        if (directionVector.magnitude > 0)
+        {
+            lastMoveDir = lookDirection;
+        }
+
         
+
         animator.SetFloat("xMove", lookDirection.x);
         animator.SetFloat("yMove", lookDirection.y);
         animator.SetFloat("Speed", directionVector.magnitude);
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
-        if (hit.collider != null)
-        {
-            NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
-            if (character != null)
-            {
-                character.DisplayDialog();
-            } 
-
-            
-        } 
+        animator.SetFloat("xLastMove", lookDirection.x);
+        animator.SetFloat("yLastMove", lookDirection.y);
+      
+        //xLastMove and yLastMove are used to store the last direction the player was moving in
+        //animator.SetFloat("xLastMove", lastMoveDir.x);
+        //animator.SetFloat("yLastMove", lastMoveDir.y);
         
-
-       // Debug.Log("x: " + lookDirection.x + " " +  "y: " + lookDirection.y);
-
-
-    } 
-
-    // void Interact()
-    // {
-    //     //RaycastHit2D hit = Physics2D.Raycast(transform.position, lookDirection, 1.5f, LayerMask.GetMask("Interactable"));
-    //     RaycastHit2D hit = Physics2D.Raycast(transform.position, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
-    //     if (hit.collider != null)
-    //     {
-    //         NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
-    //         if (character != null)
-    //         {
-    //         character.DisplayDialog();
-    //         }  
-    //     }
-    // }
+    }
 
 
 
 
     void FixedUpdate()
     {
+
         Vector2 position = rigidbody2d .position;
         position.x = position.x + speed * horizontalInput * Time.deltaTime;
         position.y = position.y + speed * verticalInput * Time.deltaTime;
