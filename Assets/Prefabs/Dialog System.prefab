@@ -503,7 +503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3dbda932759e4534d8db4aa46f36d538, type: 3}
+  m_Sprite: {fileID: 21300000, guid: caafb3734d937f64d987a4bae14f12f5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -526,6 +526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorImage: {fileID: 5263311946537555765}
+  endSprite: {fileID: 21300000, guid: caafb3734d937f64d987a4bae14f12f5, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: 3dbda932759e4534d8db4aa46f36d538, type: 3}
   actorName: {fileID: 5263311946296107049}
   messageText: {fileID: 5263311945633511525}
   backgroundBox: {fileID: 5263311945973013125}
@@ -790,7 +792,7 @@ Canvas:
   m_GameObject: {fileID: 5263311947308826534}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
