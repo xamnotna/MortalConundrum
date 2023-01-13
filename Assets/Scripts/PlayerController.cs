@@ -36,10 +36,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DialogManager.isActive == true)
+        /* if (DialogManager.isActive == true)
         {
             return;
-        }
+        } */
   
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
         {
             speed = 3.0f;
         }
+
         //xLastMove and yLastMove are used to store the last direction the player was moving in
         //animator.SetFloat("xLastMove", lastMoveDir.x);
         //animator.SetFloat("yLastMove", lastMoveDir.y);
