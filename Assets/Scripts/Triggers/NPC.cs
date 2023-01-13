@@ -42,9 +42,12 @@ public class NPC : MonoBehaviour
             canTalk = true;
             //trigger.StartDialog();
         }
-        else
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") == true)
         {
-            Debug.Log("Player cannot talk to NPC");
+            Debug.Log("Player can't talk to NPC");
             canTalk = false;
         }
     }
