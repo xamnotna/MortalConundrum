@@ -12,6 +12,7 @@ public class DialogManager : MonoBehaviour
     public TextMeshProUGUI messageText;
     public RectTransform backgroundBox;
 
+
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0;
@@ -41,6 +42,7 @@ public class DialogManager : MonoBehaviour
     } 
 
     public void NextMessage() {
+        
         activeMessage++;
         if (activeMessage < currentMessages.Length) {
             DisplayMessage();
@@ -66,9 +68,9 @@ public class DialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isActive == true || Input.GetKeyDown(KeyCode.E) && isActive == true) {
-            NextMessage();
-        }
-        
+        if (Input.GetKeyDown(KeyCode.Space) && isActive == true || Input.GetKeyDown(KeyCode.E) && isActive == true )
+            {
+                NextMessage();
+            }    
     }
 }

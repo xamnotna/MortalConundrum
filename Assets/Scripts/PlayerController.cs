@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
+       
+
         /* if (DialogManager.isActive == true)
         {
             return;
@@ -83,7 +85,18 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", directionVector.magnitude);
         animator.SetFloat("xLastMove", lookDirection.x);
         animator.SetFloat("yLastMove", lookDirection.y);
-      
+
+       // if player is in dialog then stop players walking animation and walking speed to 0
+       
+       if (DialogManager.isActive == true)
+        {
+            animator.SetFloat("Speed", 0);
+            speed = 0;
+        }
+        else
+        {
+            speed = 3.0f;
+        }
         //xLastMove and yLastMove are used to store the last direction the player was moving in
         //animator.SetFloat("xLastMove", lastMoveDir.x);
         //animator.SetFloat("yLastMove", lastMoveDir.y);
