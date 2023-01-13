@@ -50,6 +50,7 @@ public class DialogManager : MonoBehaviour
             //Debug.Log("End of conversation!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
+            NPC.canTalk = false;
         }
     }
 
