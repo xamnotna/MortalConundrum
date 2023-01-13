@@ -20,12 +20,12 @@ public class NPC : MonoBehaviour
         if (canTalk == true && Input.GetKeyDown(KeyCode.E)  && DialogManager.isActive == false)
         {
             trigger.StartDialog();
-            
+            canTalk = false;    
         }
-        else
+        /* else
         {
             return;
-        }
+        } */
        /*  else if (canTalk == true && Input.GetKeyDown(KeyCode.E) && isTalking == true)
         {
             isTalking = false;
