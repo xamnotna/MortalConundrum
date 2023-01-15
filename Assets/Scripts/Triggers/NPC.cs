@@ -5,51 +5,97 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public DialogTrigger trigger;
-    private bool canTalk = false;
+    public static bool canTalk = false;
+
+    //Show child object when player is close
+    public GameObject childObject;
+    // use collider to detect player
     
- 
-    // Start is called before the first frame update
-    /* void Start()
+    void Start()
     {
-        trigger = GetComponent<DialogTrigger>();
+        childObject.SetActive(false);
+        
     }
- */
+
     // Update is called once per frame
     void Update()
     {
         if (canTalk == true && Input.GetKeyDown(KeyCode.E)  && DialogManager.isActive == false)
         {
             trigger.StartDialog();
-            canTalk = false;    
+            childObject.SetActive(false);
+            //canTalk = false;    
         }
-        /* else
-        {
-            return;
-        } */
-       /*  else if (canTalk == true && Input.GetKeyDown(KeyCode.E) && isTalking == true)
-        {
-            isTalking = false;
-            trigger.StartDialog();
-        }
- */
+
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") == true)
         {
             Debug.Log("Player can talk to NPC");
             canTalk = true;
+            childObject.SetActive(true);
             //trigger.StartDialog();
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") == true)
         {
             Debug.Log("Player can't talk to NPC");
             canTalk = false;
+            childObject.SetActive(false);
         }
     }
+
+private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") == true  && DialogManager.isActive == false  && canTalk == false)
+        {
+            Debug.Log("Player can talk to NPC Again");
+            canTalk = true;
+            //trigger.StartDialog();
+        }
+    
+
+    }
+   
+
+//  private void OnCollisionStay2D(Collision2D collision)
+//     {
+//         if (collision.gameObject.CompareTag("Player") == true  && DialogManager.isActive == false  && canTalk == false)
+//         {
+//             Debug.Log("Player can talk to NPC Again");
+//             canTalk = true;
+//             //trigger.StartDialog();
+//         }
+    
+
+//     }
+
+
+//     private void OnCollisionEnter2D(Collision2D collision)
+//     {
+//         if (collision.gameObject.CompareTag("Player") == true)
+//         {
+//             Debug.Log("Player can talk to NPC");
+//             canTalk = true;
+//             childObject.SetActive(true);
+//             //trigger.StartDialog();
+//         }
+//     }
+
+//     private void OnCollisionExit2D(Collision2D collision)
+//     {
+//         if (collision.gameObject.CompareTag("Player") == true)
+//         {
+//             Debug.Log("Player can't talk to NPC");
+//             canTalk = false;
+//             childObject.SetActive(false);
+//         }
+//     }
+
 
 }
