@@ -8,10 +8,15 @@ public class DialogManager : MonoBehaviour
 {
 
     public Image actorImage;
+    //dialogue box source images
+    Image m_Image;
+    //dialogue box last message
+    public Sprite endSprite;
+    public Sprite backgroundSprite;
+    
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI messageText;
     public RectTransform backgroundBox;
-
 
     Message[] currentMessages;
     Actor[] currentActors;
@@ -50,7 +55,17 @@ public class DialogManager : MonoBehaviour
             //Debug.Log("End of conversation!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
+            NPC.canTalk = false;
         }
+        //show sprite 2 on last message
+        if (activeMessage == currentMessages.Length - 1) {
+            m_Image.sprite = backgroundSprite;
+        } else
+        {
+            m_Image.sprite = endSprite;
+        }
+
+
     }
 
     void AnimateTextColor() {
@@ -62,6 +77,8 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         backgroundBox.transform.localScale = Vector3.zero;
+        //Fetch the Image from the GameObject
+        m_Image = GetComponent<Image>();
         
     }
 
@@ -71,6 +88,8 @@ public class DialogManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isActive == true || Input.GetKeyDown(KeyCode.E) && isActive == true )
             {
                 NextMessage();
-            }    
+            }   
+
+
     }
 }
