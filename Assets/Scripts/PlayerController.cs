@@ -36,10 +36,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /* if (DialogManager.isActive == true)
-        {
-            return;
-        } */
   
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
@@ -84,16 +80,26 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("yLastMove", lookDirection.y);
 
        // if player is in dialog then stop players walking animation and walking speed to 0
+
+       if (DialogueManager.dialogueIsPlaying == true)
+       {
+           animator.SetFloat("Speed", 0);
+           speed = 0;
+       }
+       else
+       {
+           speed = 3.0f;
+       }
        
-       if (DialogManager.isActive == true)
-        {
-            animator.SetFloat("Speed", 0);
-            speed = 0;
-        }
-        else
-        {
-            speed = 3.0f;
-        }
+    //    if (DialogManager.isActive == true)
+    //     {
+    //         animator.SetFloat("Speed", 0);
+    //         speed = 0;
+    //     }
+    //     else
+    //     {
+    //         speed = 3.0f;
+    //     }
 
         //xLastMove and yLastMove are used to store the last direction the player was moving in
         //animator.SetFloat("xLastMove", lastMoveDir.x);
