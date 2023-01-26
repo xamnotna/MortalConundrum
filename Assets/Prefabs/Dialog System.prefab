@@ -757,7 +757,7 @@ GameObject:
   m_Layer: 5
   m_Name: Dialog System
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 6a9d1d221a3c94d83b614d921df0402e, type: 3}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
