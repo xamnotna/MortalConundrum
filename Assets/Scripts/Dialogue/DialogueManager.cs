@@ -73,14 +73,22 @@ public class DialogueManager : MonoBehaviour
 
 
         // prevent deselection of choices
-        if (evt.currentSelectedGameObject != null && evt.currentSelectedGameObject != sel)
+        if (currentStory.currentChoices.Count > 0)
         {
-            sel = evt.currentSelectedGameObject;
+            if (evt.currentSelectedGameObject == null)
+            {
+                evt.SetSelectedGameObject(choices[0]);
+            }
         }
-        else if (sel != null && evt.currentSelectedGameObject == null)
-        {
-            evt.SetSelectedGameObject(sel);
-        }
+
+        // if (evt.currentSelectedGameObject != null && evt.currentSelectedGameObject != sel)
+        // {
+        //     sel = evt.currentSelectedGameObject;
+        // }
+        // else if (sel != null && evt.currentSelectedGameObject == null)
+        // {
+        //     evt.SetSelectedGameObject(sel);
+        // }
 
         
         if (Input.GetKeyDown(KeyCode.E) && currentStory.currentChoices.Count > 0)
