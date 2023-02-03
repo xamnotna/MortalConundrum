@@ -28,35 +28,17 @@ public class DialogueManager : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait"; //tag to identify portraits in ink JSON file
     private const string LAYOUT_TAG = "layout"; //tag to identify layout in ink JSON file
 
-    //private bool canContinueToNextLine = true;
+   EventSystem evt;
 
 
-
-    //private static DialogueManager instance;
-
-
-    /* private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("More than one instance of DialogueManager found!");
-            return;
-        }
-
-        instance = this;
-    }
-
-    public static DialogueManager GetInstance()
-    {
-        return instance;
-    }
- */
+    
 
 
     private void Start()
     {
         dialoguePanel.SetActive(false);
         dialogueIsPlaying = false;
+        evt = EventSystem.current;
 
         // get all the choice text objects and store them in an array
         //hide all the choices if dialogue is not playing
@@ -76,9 +58,11 @@ public class DialogueManager : MonoBehaviour
         {
             choicesTexts[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
-        }
-    }
+        } 
 
+
+    }
+        GameObject sel;
     private void Update()
     {
         // return if dialogue is not playing
@@ -87,14 +71,27 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        // handle continuing to the next line in the dialogue when submit is pressed
-       /* if (Input.GetKeyDown(KeyCode.E))
-        {
-            ContinueStory();
-        } */
 
-        // handle selecting a choice when submit is pressed
-         if (Input.GetKeyDown(KeyCode.E))
+        // prevent deselection of choices
+        if (currentStory.currentChoices.Count > 0)
+        {
+            if (evt.currentSelectedGameObject == null)
+            {
+                evt.SetSelectedGameObject(choices[0]);
+            }
+        }
+
+        // if (evt.currentSelectedGameObject != null && evt.currentSelectedGameObject != sel)
+        // {
+        //     sel = evt.currentSelectedGameObject;
+        // }
+        // else if (sel != null && evt.currentSelectedGameObject == null)
+        // {
+        //     evt.SetSelectedGameObject(sel);
+        // }
+
+        
+        if (Input.GetKeyDown(KeyCode.E) && currentStory.currentChoices.Count > 0)
         {
             if (currentStory.currentChoices.Count > 0)
             {
@@ -104,48 +101,51 @@ public class DialogueManager : MonoBehaviour
                 {
                     currentStory.ChooseChoiceIndex(i);
                     ContinueStory();
-                    //break;
-                }
-            }
-            } else
-            {
-                ContinueStory();
-            }
-        }
-        /* else if (Input.GetKeyDown(KeyCode.E)  && currentStory.currentChoices.Count == 0) 
-            {
-                ContinueStory();
-            } */
-
-        
-
-
-        /* if (currentStory.currentChoices.Count > 0 )
-        {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            for (int i = 0; i < choices.Length; i++)
-            {
-                if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
-                {
-                    currentStory.ChooseChoiceIndex(i);
-                    ContinueStory();
                     break;
                 }
             }
-        }  
-    } else
-    {
-        if (Input.GetKeyDown(KeyCode.E) )
+            } 
+            else
+            {
+                ContinueStory();
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
         {
             ContinueStory();
         }
-    } */
+
+
+        // handle selecting a choice when submit is pressed
+        //  if (Input.GetKeyDown(KeyCode.E))
+        // {
+        //     if (currentStory.currentChoices.Count > 0)
+        //     {
+        //     for (int i = 0; i < choices.Length; i++)
+        //     {
+        //         if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
+        //         {
+        //             currentStory.ChooseChoiceIndex(i);
+        //             ContinueStory();
+        //             break;
+        //         }
+        //     }
+        //     } 
+        //     else
+        //     {
+        //         ContinueStory();
+        //     }
+        // }
+       
+        
+
 
 
     }
 
 
+     
+        
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
@@ -242,8 +242,12 @@ public class DialogueManager : MonoBehaviour
             choices[i].gameObject.SetActive(false);
         }
 
-        // select the first choice
-        StartCoroutine(selectFirstChoice());
+        // select the first choice if there are any
+        if (currentChoices.Count > 0) 
+        {
+            StartCoroutine(selectFirstChoice());
+        }
+        
 
     }
 
@@ -257,9 +261,10 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void MakeChoice(int choiceIndex)
-    {
+    { 
         currentStory.ChooseChoiceIndex(choiceIndex);
-        //ContinueStory();
+        //ContinueStory();   
+        
     }
 
 }

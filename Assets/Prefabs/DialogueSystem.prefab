@@ -949,7 +949,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9001004335736216854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000000014661}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -958,8 +958,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 172.06, y: 0.000030517578}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchoredPosition: {x: 158, y: 100.12}
+  m_SizeDelta: {x: 222, y: 445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9001004335736216849
 CanvasRenderer:
@@ -1267,6 +1267,7 @@ GameObject:
   - component: {fileID: 9001004337391243424}
   - component: {fileID: 9001004337391243427}
   - component: {fileID: 9001004337391243426}
+  - component: {fileID: 5364055473034221618}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -1326,7 +1327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: caafb3734d937f64d987a4bae14f12f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3fa746a5af9942f418f1ead06e9a72e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1336,6 +1337,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &5364055473034221618
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001004337391243431}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f447215dd7525674fa6c528f928ebd97, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &9001004337579862530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,8 +1392,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 449, y: 66.08}
-  m_SizeDelta: {x: 303.88, y: 117.84}
+  m_AnchoredPosition: {x: 412.058, y: 126}
+  m_SizeDelta: {x: 251.298, y: 53.973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9001004337579862541
 CanvasRenderer:
@@ -1429,15 +1450,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47
+  m_fontSize: 48.3
   m_fontSizeBase: 47
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1445,9 +1466,9 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1

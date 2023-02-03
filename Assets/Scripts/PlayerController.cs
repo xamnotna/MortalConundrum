@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigidbody2d ;
     float horizontalInput;
     float verticalInput;
+    bool dialogueActive = false;
 
     Animator animator;
     SpriteRenderer spriteRenderer;
@@ -31,26 +32,26 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         
         currentHealth = maxHealth;
+        dialogueActive = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-  
+
+
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-  
          Vector2 directionVector = new Vector2(horizontalInput, verticalInput);
         //Vector directionVector = new Vector3(horizontalInput, verticalInput, 0.0f);
-      
-
         //Vector2 lookDirection = new Vector2(directionVector.x, directionVector.y);
 
-        if (!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f))
+        if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !DialogueManager.dialogueIsPlaying )
         {
             lookDirection.Set(directionVector.x, directionVector.y);
             lookDirection.Normalize();
+            dialogueActive = false;
         }
     
 
@@ -78,29 +79,32 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", directionVector.magnitude);
         animator.SetFloat("xLastMove", lookDirection.x);
         animator.SetFloat("yLastMove", lookDirection.y);
+        // dialogueIsPlaying = true;
+        animator.SetBool("Dialogue", dialogueActive);
 
-       // if player is in dialog then stop players walking animation and walking speed to 0
+        if (DialogueManager.dialogueIsPlaying == true) 
+        { 
+            dialogueActive = true;
+            speed = 0.0f;
+            //return;
+        }
+        else
+        {
+            dialogueActive = false;
+            speed = 3.0f;
+        }
 
-       if (DialogueManager.dialogueIsPlaying == true)
-       {
-           animator.SetFloat("Speed", 0);
-           speed = 0;
-       }
-       else
-       {
-           speed = 3.0f;
-       }
+       // if player is in dialog then stop player from walking and unable to look around
+        /* if (DialogueManager.dialogueIsPlaying == true) 
+        {
+            animator.SetFloat("Speed", 0);
+            speed = 0;
+        }
+        else
+        {
+            speed = 3.0f;
+        } */
        
-    //    if (DialogManager.isActive == true)
-    //     {
-    //         animator.SetFloat("Speed", 0);
-    //         speed = 0;
-    //     }
-    //     else
-    //     {
-    //         speed = 3.0f;
-    //     }
-
         //xLastMove and yLastMove are used to store the last direction the player was moving in
         //animator.SetFloat("xLastMove", lastMoveDir.x);
         //animator.SetFloat("yLastMove", lastMoveDir.y);

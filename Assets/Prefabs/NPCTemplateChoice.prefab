@@ -108,7 +108,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d1c258f0750c2f24d8f04a67b062b390, type: 3}
-  m_Color: {r: 0.9209157, g: 0.9622642, b: 0.040850822, a: 1}
+  m_Color: {r: 0.10975077, g: 0.9607843, b: 0.03921567, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 6009258411716987540}
-  inkJSON: {fileID: 4900000, guid: 7dd1ad53ce374c844bdcad84eec3cbc9, type: 3}
+  inkJSON: {fileID: 4900000, guid: 7976a2d7583b93943b7ae925d8010618, type: 3}
 --- !u!1 &6009258411716987540
 GameObject:
   m_ObjectHideFlags: 0

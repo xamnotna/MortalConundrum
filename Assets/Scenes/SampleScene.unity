@@ -7702,6 +7702,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100855194}
     - target: {fileID: 1007252342, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007252342, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
+      propertyPath: m_Navigation.m_WrapAround
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007252342, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2100855194}
@@ -7709,10 +7717,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 9001004336575640972, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9001004336575640974, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 9001004336575640974, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001004336575640974, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 9001004336575640975, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7795,6 +7815,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9001004336575640975, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001004337391243426, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8052,22 +8076,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCTemplateChoice
       objectReference: {fileID: 0}
-    - target: {fileID: 6009258411243806438, guid: 4fa15e015d8fe4e4890b66647269db23, type: 3}
-      propertyPath: m_Color.b
-      value: 0.03921567
-      objectReference: {fileID: 0}
-    - target: {fileID: 6009258411243806438, guid: 4fa15e015d8fe4e4890b66647269db23, type: 3}
-      propertyPath: m_Color.g
-      value: 0.9607843
-      objectReference: {fileID: 0}
-    - target: {fileID: 6009258411243806438, guid: 4fa15e015d8fe4e4890b66647269db23, type: 3}
-      propertyPath: m_Color.r
-      value: 0.10975077
-      objectReference: {fileID: 0}
-    - target: {fileID: 6009258411568318854, guid: 4fa15e015d8fe4e4890b66647269db23, type: 3}
-      propertyPath: inkJSON
-      value: 
-      objectReference: {fileID: 4900000, guid: 7976a2d7583b93943b7ae925d8010618, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fa15e015d8fe4e4890b66647269db23, type: 3}
 --- !u!1001 &8312883712768255486
