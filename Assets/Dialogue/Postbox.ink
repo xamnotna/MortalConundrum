@@ -1,2 +1,3 @@
-I have nothing to mail #portrait:player_neutral #speaker: Rolandthebigpenismanwholikesdick
+""
+I have nothing to mail #portrait:player_neutral #speaker: Roland
 -> END
