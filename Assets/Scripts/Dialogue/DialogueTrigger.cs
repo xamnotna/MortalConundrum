@@ -42,9 +42,9 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+/*     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "Player")
+        if(collider.gameObject.tag == "Player" && !collider.isTrigger)
         {
             Debug.Log("Player can talk to NPC");
             playerInRange = true;    
@@ -54,17 +54,17 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player" && !collider.isTrigger)
         {
             Debug.Log("Player can't talk to NPC");
             playerInRange = false;
         }
 
-    }
+    } */
 
-  /*   private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !other.isTrigger)
         {
             playerInRange = true;
             Debug.Log("Player can talk to NPC");
@@ -73,10 +73,10 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !other.isTrigger)
         {
             playerInRange = false;
             Debug.Log("Player can't talk to NPC");
         }
-    } */
+    }
 }
