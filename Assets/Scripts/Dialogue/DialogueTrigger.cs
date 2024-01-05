@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [Header("Visual Cue")] 
+    [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue; //visual cue to show player that they can interact with the NPC
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON; //ink JSON file
 
     private bool playerInRange; //check if player is in range of NPC
-/* 
+
     private void Awake()
     {
         playerInRange = false;
         visualCue.SetActive(false);
-    } */
-
-    private void Start ()
-    {
-        playerInRange = false;
-        visualCue.SetActive(false);
     }
+
+    /*  private void Start()
+     {
+         playerInRange = false;
+         visualCue.SetActive(false);
+     } */
 
     private void Update()
     {
         if (playerInRange && !DialogueManager.dialogueIsPlaying)
         {
             visualCue.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E) )
-            { 
+            if (Input.GetKeyDown(KeyCode.E))
+            {
                 //DialogManager.GetInstance().EnterDialogueMode(inkJSON);
                 FindObjectOfType<DialogueManager>().EnterDialogueMode(inkJSON);
                 //Debug.Log(inkJSON.text);
@@ -40,14 +40,15 @@ public class DialogueTrigger : MonoBehaviour
         {
             visualCue.SetActive(false);
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player")
         {
             Debug.Log("Player can talk to NPC");
-            playerInRange = true;    
+            playerInRange = true;
         }
 
     }
@@ -62,21 +63,21 @@ public class DialogueTrigger : MonoBehaviour
 
     }
 
-  /*   private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerInRange = true;
-            Debug.Log("Player can talk to NPC");
-        }
-    }
+    /*  private void OnTriggerEnter2D(Collider2D other)
+     {
+         if (other.gameObject.CompareTag("Player") && !other.isTrigger)
+         {
+             playerInRange = true;
+             Debug.Log("Player can talk to NPC");
+         }
+     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            playerInRange = false;
-            Debug.Log("Player can't talk to NPC");
-        }
-    } */
+     private void OnTriggerExit2D(Collider2D other)
+     {
+         if (other.gameObject.CompareTag("Player") && !other.isTrigger)
+         {
+             playerInRange = false;
+             Debug.Log("Player can't talk to NPC");
+         }
+     } */
 }

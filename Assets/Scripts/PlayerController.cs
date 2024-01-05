@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public int health { get { return currentHealth; } }
     public int currentHealth; //test remove later public to make it private
     public VectorValue startingPosition;
+    // temporary variable to store the player's position
+    public Vector2 tempPosition;
 
     Rigidbody2D rigidbody2d;
     float horizontalInput;
@@ -39,9 +41,21 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = maxHealth;
         dialogueActive = false;
-        transform.position = startingPosition.initialValue;
+        // if tempPosition is 0,0 then set the player's position to the starting position
+        if (tempPosition.x == 0 && tempPosition.y == 0)
+        {
+            transform.position = startingPosition.initialValue;
+        }
+        else
+        {
+            transform.position = tempPosition;
+        }
 
     }
+
+
+
+
 
 
     // Update is called once per frame
