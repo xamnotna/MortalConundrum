@@ -14,6 +14,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI displayNameText; //text to display name of speaker
     [SerializeField] private Animator portraitAnimator; //animator to control portrait
 
+    private Animator layoutAnimator; //animator to control layout
+
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices; //choices UI
 
@@ -22,27 +24,53 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory; //ink story
 
     //public bool dialogueIsPlaying {get; private set;} //check if dialogue is playing
-    public static bool dialogueIsPlaying = false;
+    //public static bool dialogueIsPlaying = false;
+    public bool dialogueIsPlaying { get; private set; }
+
+    private static DialogueManager instance;
 
     private const string SPEAKER_TAG = "speaker"; //tag to identify speaker in ink JSON file
     private const string PORTRAIT_TAG = "portrait"; //tag to identify portraits in ink JSON file
     private const string LAYOUT_TAG = "layout"; //tag to identify layout in ink JSON file
 
-   EventSystem evt;
+    EventSystem evt;
 
+    private void Awake()
+    {
+        /* if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else // if there is already an instance of this object, destroy it
+        {
+            Destroy(gameObject);
+        } */
 
-    
+        if (instance != null)
+        {
+            Debug.LogWarning("Found more than one Dialogue Manager in the scene");
+        }
+        instance = this;
+    }
 
+    public static DialogueManager GetInstance()
+    {
+        return instance;
+    }
 
     private void Start()
     {
+
         dialoguePanel.SetActive(false);
         dialogueIsPlaying = false;
         evt = EventSystem.current;
 
+        layoutAnimator = dialoguePanel.GetComponent<Animator>();
+
         // get all the choice text objects and store them in an array
         //hide all the choices if dialogue is not playing
-    
+
         foreach (GameObject choice in choices)
         {
             choice.SetActive(false);
@@ -58,11 +86,13 @@ public class DialogueManager : MonoBehaviour
         {
             choicesTexts[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
-        } 
+        }
+
+
 
 
     }
-        GameObject sel;
+    //GameObject sel;
     private void Update()
     {
         // return if dialogue is not playing
@@ -90,11 +120,13 @@ public class DialogueManager : MonoBehaviour
         //     evt.SetSelectedGameObject(sel);
         // }
 
-        
-        if (Input.GetKeyDown(KeyCode.E) && currentStory.currentChoices.Count > 0)
+
+        if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.E))
         {
-            if (currentStory.currentChoices.Count > 0)
-            {
+            ContinueStory();
+        }
+        else if (currentStory.currentChoices.Count > 0 && Input.GetKeyDown(KeyCode.E))
+        {
             for (int i = 0; i < choices.Length; i++)
             {
                 if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
@@ -104,16 +136,53 @@ public class DialogueManager : MonoBehaviour
                     break;
                 }
             }
-            } 
-            else
+        }
+
+        /*  if (Input.GetKeyDown(KeyCode.E) && currentStory.currentChoices.Count > 0)
+         {
+             if (currentStory.currentChoices.Count > 0)
+             {
+                 for (int i = 0; i < choices.Length; i++)
+                 {
+                     if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
+                     {
+                         currentStory.ChooseChoiceIndex(i);
+                         ContinueStory();
+                         break;
+                     }
+                 }
+             }
+              else
+              {
+                  ContinueStory();
+              }
+         }   
+         else if (Input.GetKeyDown(KeyCode.E))
+         {
+             ContinueStory();
+         } */
+
+
+
+        /* if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (currentStory.currentChoices.Count > 0)
+            {
+                for (int i = 0; i < choices.Length; i++)
+                {
+                    if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
+                    {
+                        currentStory.ChooseChoiceIndex(i);
+                        ContinueStory();
+                        break;
+                    }
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.E))
             {
                 ContinueStory();
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            ContinueStory();
-        }
+        } */
 
 
         // handle selecting a choice when submit is pressed
@@ -136,22 +205,20 @@ public class DialogueManager : MonoBehaviour
         //         ContinueStory();
         //     }
         // }
-       
-        
-
-
 
     }
-
-
-     
-        
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+
+        displayNameText.text = "???";
+        portraitAnimator.Play("default");
+        layoutAnimator.Play("right");
+
+
         ContinueStory();
     }
 
@@ -208,7 +275,7 @@ public class DialogueManager : MonoBehaviour
                     break;
                 case LAYOUT_TAG:
                     // set the layout
-                    Debug.Log("Layout: " + tagValue);
+                    layoutAnimator.Play(tagValue);
                     break;
                 default:
                     Debug.LogWarning("Tag came in but is not correctly formatted: " + tag);
@@ -221,7 +288,8 @@ public class DialogueManager : MonoBehaviour
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        if(currentChoices.Count > choices.Length)
+        // defensive check to make sure there are no more choices than the UI can support
+        if (currentChoices.Count > choices.Length)
         {
             Debug.LogError("More choices were given than the UI can support. Number of choices given: "
             + currentChoices.Count);
@@ -243,11 +311,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         // select the first choice if there are any
-        if (currentChoices.Count > 0) 
+        /* if (currentChoices.Count > 0)
         {
             StartCoroutine(selectFirstChoice());
-        }
-        
+        } */
+
+        StartCoroutine(selectFirstChoice());
+
 
     }
 
@@ -261,10 +331,9 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void MakeChoice(int choiceIndex)
-    { 
+    {
         currentStory.ChooseChoiceIndex(choiceIndex);
-        //ContinueStory();   
-        
+        ContinueStory();
     }
 
 }

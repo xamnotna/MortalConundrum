@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [Header("Visual Cue")] 
+    [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue; //visual cue to show player that they can interact with the NPC
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON; //ink JSON file
 
-    private bool playerInRange; //check if player is in range of NPC
-/* 
-    private void Awake()
+    private bool playerInRange; //is the player in range of the NPC?
+
+    /* private void Start()
     {
-        playerInRange = false;
         visualCue.SetActive(false);
     } */
 
-    private void Start ()
+    private void Awake()
     {
         playerInRange = false;
         visualCue.SetActive(false);
@@ -26,14 +25,12 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (playerInRange && !DialogueManager.dialogueIsPlaying)
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             visualCue.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E) )
-            { 
-                //DialogManager.GetInstance().EnterDialogueMode(inkJSON);
-                FindObjectOfType<DialogueManager>().EnterDialogueMode(inkJSON);
-                //Debug.Log(inkJSON.text);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                TriggerDialogue();
             }
         }
         else
@@ -42,41 +39,82 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-/*     private void OnTriggerEnter2D(Collider2D collider)
+    // Update the current trigger when the player enters
+    /*  private void OnTriggerEnter(Collider other)
+     {
+         if (other.tag == "Player" && !other.isTrigger)
+         {
+             playerInRange = true;
+             Debug.Log("Player can talk to NPC");
+             visualCue.SetActive(true);
+         }
+     }
+
+     // Clear the current trigger when the player exits
+     private void OnTriggerExit(Collider other)
+     {
+         if (other.tag == "Player" && !other.isTrigger)
+         {
+             playerInRange = false;
+             visualCue.SetActive(false);
+         }
+     } */
+
+    public void TriggerDialogue()
     {
-        if(collider.gameObject.tag == "Player" && !collider.isTrigger)
+        FindObjectOfType<DialogueManager>().EnterDialogueMode(inkJSON);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Player")
         {
+            playerInRange = true;
             Debug.Log("Player can talk to NPC");
-            playerInRange = true;    
         }
 
     }
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player" && !collider.isTrigger)
+        if (collider.gameObject.tag == "Player")
         {
             Debug.Log("Player can't talk to NPC");
             playerInRange = false;
         }
 
-    } */
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player") && !other.isTrigger)
-        {
-            playerInRange = true;
-            Debug.Log("Player can talk to NPC");
-        }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    /*   private void OnTriggerEnter2D(Collider2D other)
+      {
+          if (other.gameObject.CompareTag("Player") && !other.isTrigger)
+          {
+              playerInRange = true;
+              Debug.Log("Player can talk to NPC");
+          }
+      }
+
+      private void OnTriggerExit2D(Collider2D other)
+      {
+          if (other.gameObject.CompareTag("Player") && !other.isTrigger)
+          {
+              playerInRange = false;
+              Debug.Log("Player can't talk to NPC");
+          }
+      } */
+}
+/* if (playerInRange && !DialogueManager.dialogueIsPlaying)
+{
+    visualCue.SetActive(true);
+    if (Input.GetKeyDown(KeyCode.E))
     {
-        if (other.gameObject.CompareTag("Player") && !other.isTrigger)
-        {
-            playerInRange = false;
-            Debug.Log("Player can't talk to NPC");
-        }
+        //DialogManager.GetInstance().EnterDialogueMode(inkJSON);
+        FindObjectOfType<DialogueManager>().EnterDialogueMode(inkJSON);
+        //Debug.Log(inkJSON.text);
     }
 }
+else
+{
+    visualCue.SetActive(false);
+} */

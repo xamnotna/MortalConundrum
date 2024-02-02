@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         //Vector directionVector = new Vector3(horizontalInput, verticalInput, 0.0f);
         //Vector2 lookDirection = new Vector2(directionVector.x, directionVector.y);
 
-        if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !DialogueManager.dialogueIsPlaying)
+        if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             lookDirection.Set(directionVector.x, directionVector.y);
             lookDirection.Normalize();
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
         // dialogueIsPlaying = true;
         animator.SetBool("Dialogue", dialogueActive);
 
-        if (DialogueManager.dialogueIsPlaying == true)
+        if (DialogueManager.GetInstance().dialogueIsPlaying == true)
         {
             dialogueActive = true;
             speed = 0.0f;

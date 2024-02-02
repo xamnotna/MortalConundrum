@@ -5201,8 +5201,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.5941, y: -1.8935499, z: 0}
-    m_Extent: {x: 2.7533, y: 2.95255, z: 0}
+    m_Center: {x: 0.59380007, y: -1.89345, z: 0}
+    m_Extent: {x: 2.7535, y: 2.95235, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5974,8 +5974,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.27245, y: -1.19765, z: 0}
-    m_Extent: {x: 1.08155, y: 2.30955, z: 0}
+    m_Center: {x: 0.27260002, y: -1.1972499, z: 0}
+    m_Extent: {x: 1.0817, y: 2.31025, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6385,7 +6385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1724814759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7608,6 +7608,10 @@ PrefabInstance:
     - target: {fileID: 8312883712354863022, guid: aab4cdda5920cf745a50ad2039d67515, type: 3}
       propertyPath: m_Name
       value: Managers
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312883712354863022, guid: aab4cdda5920cf745a50ad2039d67515, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8312883712354863023, guid: aab4cdda5920cf745a50ad2039d67515, type: 3}
       propertyPath: m_RootOrder
