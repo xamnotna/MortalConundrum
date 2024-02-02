@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CityBlock 1.unity
     guid: 198babe24336ce449942c94432fad9b0
+  - enabled: 1
+    path: Assets/Scenes/CityBlock 2.unity
+    guid: 87cc87ed951d58641876c00cdf1c350f
+  - enabled: 1
+    path: Assets/Scenes/GeneralStore.unity
+    guid: 276e18743f4229943bca31ef651e1b8c
   m_configObjects: {}
