@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheCornerBar.unity
     guid: 5371816667da9fb4b8425097e974eb31
+  - enabled: 1
+    path: Assets/Scenes/CityBlock 3.unity
+    guid: 3fa7e95003b24bd4c8740454fb461ecc
   m_configObjects: {}
