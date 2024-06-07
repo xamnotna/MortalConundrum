@@ -19,7 +19,7 @@ public class FighterStats : MonoBehaviour, IComparable
     public float health;
     public float magic;
     public float melee;
-    public float range;
+    public float magicRange;
     public float defense;
     public float speed;
     public float experience;
@@ -74,7 +74,7 @@ public class FighterStats : MonoBehaviour, IComparable
             healthFill.transform.localScale = new Vector2(xNewHealthScale, healthScale.y);
         }
     }
-    public void updateMagicFill(float cost)
+    public void updateManaFill(float cost)
     {
         magic = magic - cost;
         xNewMagicScale = magicScale.x * (magic / startMagic);

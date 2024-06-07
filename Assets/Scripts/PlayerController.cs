@@ -103,6 +103,15 @@ public class PlayerController : MonoBehaviour
             speed = 3.0f;
         }
 
+        /*  if (GameMap.GetInstance().StationSelectPanel == true)
+         {
+             speed = 0.0f;
+         }
+         else
+         {
+             speed = 3.0f;
+         } */
+
         // if player is in dialog then stop player from walking and unable to look around
         /* if (DialogueManager.dialogueIsPlaying == true) 
         {

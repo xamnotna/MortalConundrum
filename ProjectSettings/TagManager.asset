@@ -8,6 +8,7 @@ TagManager:
   - EnemyUnit
   - Hero
   - Dead
+  - Enemy
   layers:
   - Default
   - TransparentFX

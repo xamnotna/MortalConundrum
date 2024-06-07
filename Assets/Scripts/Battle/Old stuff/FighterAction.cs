@@ -29,13 +29,19 @@ public class FighterAction : MonoBehaviour
     private Sprite faceIcon;
 
     private GameObject currentAttack;
-    private GameObject meleeAttack;
-    private GameObject rangeAttack;
+
     /*  private GameObject magicAttack;
      private GameObject defendAttack;
      private GameObject itemAttack; */
 
     private string attackType;
+
+    private void Start()
+    {
+        hero = GameObject.FindGameObjectWithTag("Hero");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+
+    }
 
     public void SelectAttack(string btn)
     {
@@ -46,11 +52,11 @@ public class FighterAction : MonoBehaviour
         }
         if (btn.CompareTo("melee") == 0)
         {
-            meleeAttack.GetComponent<ActionScript>().Attack(victim);
+            meleePrefab.GetComponent<ActionScript>().Attack(victim);
         }
         else if (btn.CompareTo("range") == 0)
         {
-            rangeAttack.GetComponent<ActionScript>().Attack(victim);
+            rangePrefab.GetComponent<ActionScript>().Attack(victim);
         }
         else
         {

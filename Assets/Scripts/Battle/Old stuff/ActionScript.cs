@@ -13,7 +13,7 @@ public class ActionScript : MonoBehaviour
     private bool magicAttack;
 
     [SerializeField]
-    private float magicCost;
+    private float manaCost;
 
     [SerializeField]
     private float minAttackMultiplier;
@@ -35,7 +35,7 @@ public class ActionScript : MonoBehaviour
 
     private void Start()
     {
-        magicScale = GameObject.Find("HeroMagicFill").GetComponent<RectTransform>().localScale;
+        magicScale = GameObject.Find("HeroManaFill").GetComponent<RectTransform>().localScale;
     }
 
     public void Attack(GameObject victim)
@@ -43,22 +43,22 @@ public class ActionScript : MonoBehaviour
         attackerStats = owner.GetComponent<FighterStats>();
         targetStats = victim.GetComponent<FighterStats>();
 
-        /* if (attackerStats.magic >= magicCost) // check if attacker has enough mana to perform magic attack
+        if (attackerStats.magic >= manaCost) // check if attacker has enough mana to perform magic attack
         {
             float multiplier = Random.Range(minAttackMultiplier, maxAttackMultiplier); // randomize attack multiplier
-            attackerStats.updateMagicFill(magicCost); // update mana bar
+            attackerStats.updateManaFill(manaCost); // update mana bar
 
-            damage = multiplier * attackerStats.attack;
+            damage = multiplier * attackerStats.melee;
             if (magicAttack) // if magic attack, calculate damage based on magic stat
             {
-                damage = multiplier * attackerStats.magic;
-                attackerStats.magic = attackerStats.magic - magicCost;
+                damage = multiplier * attackerStats.magicRange;
+                attackerStats.magic = attackerStats.magic - manaCost;
             }
             float defenseMultiplier = Random.Range(minDefenseMultiplier, maxDefenseMultiplier); // randomize defense multiplier
             damage = Mathf.Max(0, damage - (defenseMultiplier * targetStats.defense)); // calculate damage
             owner.GetComponent<Animator>().Play(animationName); // play attack animation
             targetStats.ReceiveDamage(damage); // apply damage to target
-        } */
+        }
 
     }
 }
