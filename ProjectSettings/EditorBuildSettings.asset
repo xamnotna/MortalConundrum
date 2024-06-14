@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CityBlock 3.unity
     guid: 3fa7e95003b24bd4c8740454fb461ecc
+  - enabled: 1
+    path: Assets/Scenes/Stairwell 1.unity
+    guid: 5d9ee2ffb85f13447a58788565e445c4
   m_configObjects: {}
