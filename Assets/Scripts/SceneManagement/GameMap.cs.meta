@@ -3,7 +3,9 @@ guid: e409c50c3e57aac4eaf615187ed69340
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - StationSelectPanel: {instanceID: 0}
+  - playerStorage: {fileID: 11400000, guid: 383ca088a2c12a6429ce5953a6917eb2, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
