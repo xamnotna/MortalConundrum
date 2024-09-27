@@ -21,8 +21,6 @@ public class OnClickSetPos : MonoBehaviour
 
         GetComponent<Button>().onClick.AddListener(onClick);
 
-
-
     }
 
     private void Update()
