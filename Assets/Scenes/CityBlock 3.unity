@@ -5853,11 +5853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4219703225780117047, guid: 742066cb2ba5fe349a95b857a58a4587, type: 3}
       propertyPath: playerPosition.x
-      value: -2.34
+      value: -2.52
       objectReference: {fileID: 0}
     - target: {fileID: 4219703225780117047, guid: 742066cb2ba5fe349a95b857a58a4587, type: 3}
       propertyPath: playerPosition.y
-      value: -9.19
+      value: -7.94
       objectReference: {fileID: 0}
     - target: {fileID: 7101354458914109515, guid: 742066cb2ba5fe349a95b857a58a4587, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
