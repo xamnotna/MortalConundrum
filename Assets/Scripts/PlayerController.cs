@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour
 
     public int health { get { return currentHealth; } }
     public int currentHealth; //test remove later public to make it private
+    [System.Serializable]
+    public class VectorValue
+    {
+        public Vector2 initialValue;
+    }
     public VectorValue startingPosition;
 
     Rigidbody2D rigidbody2d;
@@ -24,7 +29,6 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Vector2 lookDirection = new Vector2(1, 0);
 
-    // lastMoveDir is used to store the last direction the player was moving in
     Vector2 lastMoveDir = new Vector2(1, 0);
 
 
@@ -52,12 +56,14 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
 
 
-
+        //if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !DialogueManager.Instance.dialogueIsPlaying)
         Vector2 directionVector = new Vector2(horizontalInput, verticalInput);
         //Vector directionVector = new Vector3(horizontalInput, verticalInput, 0.0f);
         //Vector2 lookDirection = new Vector2(directionVector.x, directionVector.y);
 
+
         if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !DialogueManager.GetInstance().dialogueIsPlaying)
+        //if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !DialogueManager.Instance.dialogueIsPlaying)
         {
             lookDirection.Set(directionVector.x, directionVector.y);
             lookDirection.Normalize();
@@ -76,19 +82,25 @@ public class PlayerController : MonoBehaviour
 
         // if DialogManager.isActive == true then stop player from walking
 
-        if (directionVector.magnitude > 0)
+        if (directionVector.sqrMagnitude > 0)
         {
             lastMoveDir = lookDirection;
         }
+
+        // 8 directions of movement
+
+
 
 
 
         animator.SetFloat("xMove", lookDirection.x);
         animator.SetFloat("yMove", lookDirection.y);
-        animator.SetFloat("Speed", directionVector.magnitude);
+        animator.SetFloat("Speed", directionVector.sqrMagnitude);
+        /*  if (DialogueManager.Instance.dialogueIsPlaying == true)
+             animator.SetFloat("yLastMove", lookDirection.y); */
         animator.SetFloat("xLastMove", lookDirection.x);
         animator.SetFloat("yLastMove", lookDirection.y);
-        // dialogueIsPlaying = true;
+        //dialogueIsPlaying = true;
         animator.SetBool("Dialogue", dialogueActive);
 
         if (DialogueManager.GetInstance().dialogueIsPlaying == true)
@@ -103,7 +115,7 @@ public class PlayerController : MonoBehaviour
             speed = 3.0f;
         }
 
-        if (GameMap.GetInstance().StationSelectPanel.activeSelf ) // if StationSelectPanel is active then stop player from walking
+        if (GameMap.GetInstance().StationSelectPanel.activeSelf) // if StationSelectPanel is active then stop player from walking
         {
             dialogueActive = true;
             speed = 0.0f;
@@ -111,7 +123,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             dialogueActive = false;
-            speed = 3.0f;;
+            speed = 3.0f; ;
         }
 
         // if player is in dialog then stop player from walking and unable to look around
