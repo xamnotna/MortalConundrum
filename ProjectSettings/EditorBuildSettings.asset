@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CentralStation.unity
     guid: 75513d97c8ddfbc47a3d01895832444e
+  - enabled: 1
+    path: Assets/Scenes/Stairwell 2.unity
+    guid: 4f4c756941529e54c9e2e35883afbac1
   m_configObjects: {}

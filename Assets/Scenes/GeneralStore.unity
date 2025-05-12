@@ -2426,7 +2426,7 @@ SpriteRenderer:
   m_Size: {x: 1.19, y: 2.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1213417786
@@ -2473,7 +2473,7 @@ Transform:
   m_GameObject: {fileID: 1248292196}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: 1.57, z: 0}
+  m_LocalPosition: {x: 0.187, y: 1.31, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2520,15 +2520,15 @@ SpriteRenderer:
   m_SortingLayerID: 1632995225
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 26f1159f1b57d5b47b6740181573451c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.54, y: 0.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1298630262
@@ -3362,7 +3362,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1736942253
@@ -4448,7 +4448,7 @@ Transform:
   m_GameObject: {fileID: 2083587278}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.032, y: 0.037, z: 0}
+  m_LocalPosition: {x: 0.068, y: 0.097, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4495,12 +4495,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: e582438c9eecfae438972007035db5be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d950299fb0494084fadd8190c7c5bb94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.69, y: 1.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4521,7 +4521,7 @@ MonoBehaviour:
   isMovable: 0
   renderBelowAll: 0
   sortType: 0
-  SorterPositionOffset: {x: -0.9085612, y: -1.3930104, z: 0}
+  SorterPositionOffset: {x: -0.9085612, y: -1.393011, z: 0}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort: []
   useSortingGroup: 0
