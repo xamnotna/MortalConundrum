@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         {
             lookDirection.Set(directionVector.x, directionVector.y);
             lookDirection.Normalize();
-            dialogueActive = false;
+            //dialogueActive = false;
         }
 
 
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
         {
             dialogueActive = true;
             speed = 0.0f;
-            //return;
+            return;
         }
         else
         {
@@ -129,12 +129,12 @@ public class PlayerController : MonoBehaviour
         // if player is in dialog then stop player from walking and unable to look around
         /* if (DialogueManager.dialogueIsPlaying == true) 
         {
-            animator.SetFloat("Speed", 0);
-            speed = 0;
+        animator.SetFloat("Speed", 0);
+        speed = 0;
         }
         else
         {
-            speed = 3.0f;
+        speed = 3.0f;
         } */
 
         //xLastMove and yLastMove are used to store the last direction the player was moving in

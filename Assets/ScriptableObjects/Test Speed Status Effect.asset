@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e54f9e5e81fa44d9da00f45cf774d0, type: 3}
+  m_Name: Test Speed Status Effect
+  m_EditorClassIdentifier: 
+  Name: Test speed buff
+  turnDuration: 1
+  isEffectStackable: 1
+  isDurationStackable: 1
+  ModifierValue: 1
+  ModifierType: 300
