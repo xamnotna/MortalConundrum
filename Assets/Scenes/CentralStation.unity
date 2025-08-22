@@ -6181,6 +6181,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrefabCityblockParent
       objectReference: {fileID: 0}
+    - target: {fileID: 5022446116783371307, guid: 471e4949bea7dbc4c9a58a7c4d59d15d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -396
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022446116783371307, guid: 471e4949bea7dbc4c9a58a7c4d59d15d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -124
+      objectReference: {fileID: 0}
     - target: {fileID: 5435630164317004016, guid: 471e4949bea7dbc4c9a58a7c4d59d15d, type: 3}
       propertyPath: playerPosition.x
       value: -23.15
@@ -6191,11 +6199,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6396794452743643526, guid: 471e4949bea7dbc4c9a58a7c4d59d15d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 193
+      value: -3.9
       objectReference: {fileID: 0}
     - target: {fileID: 6396794452743643526, guid: 471e4949bea7dbc4c9a58a7c4d59d15d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 86.5
+      value: 14.6
       objectReference: {fileID: 0}
     - target: {fileID: 8329437119741236548, guid: 471e4949bea7dbc4c9a58a7c4d59d15d, type: 3}
       propertyPath: m_LocalPosition.x
