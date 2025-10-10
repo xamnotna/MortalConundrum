@@ -47,7 +47,7 @@ public class Enemy : Battler
 
     protected void OnDestroy()
     {
-        if (FindObjectOfType<BattleManager>())
+        if (FindFirstObjectByType<BattleManager>())
         {
             BattleManager.OnActiveTurnChanged -= ToggleTurnTimer;
         }

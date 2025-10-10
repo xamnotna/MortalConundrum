@@ -71,7 +71,8 @@ public class IsoSpriteSorting : MonoBehaviour
     private void RefreshBounds()
     {
         Bounds groupBounds = renderersToSort[0].bounds;
-        foreach (Renderer childRenderer in renderersToSort) {
+        foreach (Renderer childRenderer in renderersToSort)
+        {
             groupBounds.Encapsulate(childRenderer.bounds);
         }
         cachedBounds = new Bounds2D(groupBounds);
@@ -155,7 +156,7 @@ public class IsoSpriteSorting : MonoBehaviour
 #if UNITY_EDITOR
     public void SortScene()
     {
-        IsoSpriteSorting[] isoSorters = FindObjectsOfType(typeof(IsoSpriteSorting)) as IsoSpriteSorting[];
+        IsoSpriteSorting[] isoSorters = FindObjectsByType<IsoSpriteSorting>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         for (int i = 0; i < isoSorters.Length; i++)
         {
             isoSorters[i].Setup();
@@ -189,7 +190,7 @@ public class IsoSpriteSorting : MonoBehaviour
         t = transform;  //This needs to be here AND in the Awake function
         if (useSortingGroup)
         {
-                       sortingGroup = GetComponent<SortingGroup>();
+            sortingGroup = GetComponent<SortingGroup>();
         }
         else
         {

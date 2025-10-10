@@ -62,7 +62,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().EnterDialogueMode(inkJSON);
+        FindFirstObjectByType<DialogueManager>().EnterDialogueMode(inkJSON);
     }
 
 
