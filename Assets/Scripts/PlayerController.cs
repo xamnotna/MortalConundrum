@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
         {
             dialogueActive = true;
             speed = 0.0f;
-            //return;
+            return;
         }
         else
         {
