@@ -13,12 +13,14 @@ public class PlayerController : MonoBehaviour
 
     public int health { get { return currentHealth; } }
     public int currentHealth; //test remove later public to make it private
-    [System.Serializable]
-    public class VectorValue
-    {
-        public Vector2 initialValue;
-    }
     public VectorValue startingPosition;
+
+    /*  [System.Serializable]
+     public class VectorValue
+     {
+        public Vector2 initialValue;
+     } */
+
 
     Rigidbody2D rigidbody2d;
     float horizontalInput;
@@ -33,6 +35,11 @@ public class PlayerController : MonoBehaviour
 
 
 
+    void Awake()
+    {
+        //DontDestroyOnLoad(gameObject);
+        transform.position = startingPosition.initialValue;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = maxHealth;
         dialogueActive = false;
-        transform.position = startingPosition.initialValue;
+
 
     }
 

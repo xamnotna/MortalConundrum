@@ -35,4 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stairwell 2.unity
     guid: 4f4c756941529e54c9e2e35883afbac1
+  - enabled: 1
+    path: Assets/Scenes/TurnbattleSystem.unity
+    guid: 84b08b881ed4679499057acbd4c66ef7
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
