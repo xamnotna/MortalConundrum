@@ -102,14 +102,7 @@ public class DialogueManager : MonoBehaviour
         }
 
 
-        // prevent deselection of choices
-        if (currentStory.currentChoices.Count > 0)
-        {
-            if (evt.currentSelectedGameObject == null)
-            {
-                evt.SetSelectedGameObject(choices[0]);
-            }
-        }
+    selectFirstChoice();
 
         // if (evt.currentSelectedGameObject != null && evt.currentSelectedGameObject != sel)
         // {
@@ -326,8 +319,12 @@ public class DialogueManager : MonoBehaviour
         // Event Systems is requires we clear it first, then wait
         // for at least one frame before we can set the selected object
         EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+        yield return null;
+   // Only set selected object if there are choices available
+        if (choices != null && choices.Length > 0 && choices[0] != null)
+        {
+            EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+        }
     }
 
     public void MakeChoice(int choiceIndex)

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d0f1853ff8149c540ad2abf3d5c9b914
+guid: 2e8aba6d828623a45aae3c7a9b956078
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -788901392931108561
-    second: Player happy_0
+      213: 2272616617319972596
+    second: spr_brick_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player happy_0
+      name: spr_brick_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
-        width: 227
-        height: 394
+        x: 3
+        y: 1
+        width: 123
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f29c787ec524d05f0800000000000000
-      internalID: -788901392931108561
+      spriteID: 4feb10ac5c4f98f10800000000000000
+      internalID: 2272616617319972596
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Player happy_0: -788901392931108561
+      spr_brick_0: 2272616617319972596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
