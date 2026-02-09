@@ -35,4 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stairwell 2.unity
     guid: 4f4c756941529e54c9e2e35883afbac1
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3b8dda7dfd6431a4d9d4737615c215b7, type: 3}
+  m_UseUCBPForAssetBundles: 0
