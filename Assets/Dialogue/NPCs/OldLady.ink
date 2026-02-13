@@ -15,7 +15,7 @@ That vendor sure is takin' his sweet time!#speaker:Britt-Marie #portrait:NPC_old
 Huh? Nearby? #speaker:Britt-Marie #portrait:NPC_oldlady #layout:left
 Noo nooo, I live a couple of stations from here. But with this new subway system you're here in a flash! #speaker:Britt-Marie #portrait:NPC_oldlady #layout:left
 -> main
-* [End]
+* [Good bye]
 See you around #speaker:Roland #portrait:player_neutral
 What? #speaker:Britt-Marie #portrait:NPC_oldlady #layout:left
 -> END

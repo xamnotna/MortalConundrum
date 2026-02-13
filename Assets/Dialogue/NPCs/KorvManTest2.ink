@@ -8,9 +8,9 @@ Choose an option!
 + [Shop]
 Sorry I'm all of out of hot dogs #speaker:Unknown fella #portrait:korvman_neutral #layout:left
 -> main
-+ [Ask why he's working in the dark]
++ [Why are you working in the dark?]
 Dark? What do you mean? #speaker:Unknown fella #portrait:korvman_neutral #layout:left
 -> main
-* [End]
-See you around #speaker:Roland #portrait:player_neutral
+* [See you around]
+See you later then #speaker:Roland #portrait:player_neutral
 -> END
