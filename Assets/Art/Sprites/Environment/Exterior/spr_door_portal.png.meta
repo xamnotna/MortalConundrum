@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 30fb2d550f1910c4faf7487b210a5bc5
+guid: d47610af1103f8b4b8b5c199efde0c85
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2715554474025960478
-    second: Player angry 1_0
+      213: 2970909695264973021
+    second: spr_door_portal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player angry 1_0
+      name: spr_door_portal_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 46
-        width: 227
-        height: 371
+        x: 1
+        y: 0
+        width: 243
+        height: 379
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ebb57fe799605ad0800000000000000
-      internalID: -2715554474025960478
+      spriteID: dd0680690aaca3920800000000000000
+      internalID: 2970909695264973021
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Player angry 1_0: -2715554474025960478
+      spr_door_portal_0: 2970909695264973021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

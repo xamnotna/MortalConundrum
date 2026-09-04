@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: aabbf6e10fd1d1d43a0e57b2db189082
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5135859331134405123
+    second: resume_button_0
+  - first:
+      213: 925362248010195324
+    second: resume_button_1
+  - first:
+      213: 6794475875539532573
+    second: resume_button_2
+  - first:
+      213: -5499905060364840193
+    second: resume_button_3
+  - first:
+      213: -3565804735507769713
+    second: resume_button_4
+  - first:
+      213: -843919589627640534
+    second: resume_button_5
+  - first:
+      213: -4496474361199202801
+    second: resume_button_6
+  - first:
+      213: 4125501858341469359
+    second: resume_button_7
+  - first:
+      213: 5148493620889106712
+    second: resume_button_8
+  - first:
+      213: -4105801865564870112
+    second: resume_button_9
+  - first:
+      213: -3467224915424929652
+    second: resume_button_10
+  - first:
+      213: -6175935775665392120
+    second: resume_button_11
+  - first:
+      213: -2306144111366348852
+    second: resume_button_12
+  - first:
+      213: 3058820390043917736
+    second: resume_button_13
+  - first:
+      213: -9053424608187208824
+    second: resume_button_14
+  - first:
+      213: -7302145585449735326
+    second: resume_button_15
+  - first:
+      213: 3125545100805186569
+    second: resume_button_16
+  - first:
+      213: 5313872426964684793
+    second: resume_button_17
+  - first:
+      213: 6339650791223475085
+    second: resume_button_18
+  - first:
+      213: 1189042018700456251
+    second: resume_button_19
+  - first:
+      213: 8534992482650587077
+    second: resume_button_20
+  - first:
+      213: 28446362212167968
+    second: resume_button_21
+  - first:
+      213: -8344517277601321456
+    second: resume_button_22
+  - first:
+      213: -2519848722872880391
+    second: resume_button_23
+  - first:
+      213: 2692633469185070075
+    second: resume_button_24
+  - first:
+      213: 3672516220525547368
+    second: resume_button_25
+  - first:
+      213: -2844184006143489964
+    second: resume_button_26
+  - first:
+      213: -5408119961479981448
+    second: resume_button_27
+  - first:
+      213: -5960546174811903407
+    second: resume_button_28
+  - first:
+      213: 4860162922395950431
+    second: resume_button_29
+  - first:
+      213: -611967146041646015
+    second: resume_button_30
+  - first:
+      213: -5041924572827191172
+    second: resume_button_31
+  - first:
+      213: 2854907592503106968
+    second: resume_button_32
+  - first:
+      213: -6128490950018024329
+    second: resume_button_33
+  - first:
+      213: -2341395832796336169
+    second: resume_button_34
+  - first:
+      213: 5066236530927587015
+    second: resume_button_35
+  - first:
+      213: 5768216969604182331
+    second: resume_button_36
+  - first:
+      213: 1756135475839271137
+    second: resume_button_37
+  - first:
+      213: -1067135265370811989
+    second: resume_button_38
+  - first:
+      213: 3140441477252132914
+    second: resume_button_39
+  - first:
+      213: 4560876873658072575
+    second: resume_button_40
+  - first:
+      213: -3136442137033077665
+    second: resume_button_41
+  - first:
+      213: 164100943572580869
+    second: resume_button_42
+  - first:
+      213: -4676232884608366290
+    second: resume_button_43
+  - first:
+      213: 2599611524121103948
+    second: resume_button_44
+  - first:
+      213: -5223732217586057647
+    second: resume_button_45
+  - first:
+      213: -2186778420771885701
+    second: resume_button_46
+  - first:
+      213: 4796210544577704664
+    second: resume_button_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: resume_button_0
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 504
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5cb573623c9b8b0800000000000000
+      internalID: -5135859331134405123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_1
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 480
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c716431df0c87dc00800000000000000
+      internalID: 925362248010195324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_2
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 467
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1bbe746fc3da4e50800000000000000
+      internalID: 6794475875539532573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_3
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 431
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff29492cc796ca3b0800000000000000
+      internalID: -5499905060364840193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_4
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 439
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8657a94c77b38ec0800000000000000
+      internalID: -3565804735507769713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_5
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 448
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a254041ca9bc944f0800000000000000
+      internalID: -843919589627640534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_6
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 91
+        width: 1344
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ee11f44605991c0800000000000000
+      internalID: -4496474361199202801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_7
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 439
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac38a2151ab04930800000000000000
+      internalID: 4125501858341469359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_8
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 441
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819b5799baf137740800000000000000
+      internalID: 5148493620889106712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 306
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02aaedce4f24507c0800000000000000
+      internalID: -4105801865564870112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_10
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 296
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8896bf3f41f1efc0800000000000000
+      internalID: -3467224915424929652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_11
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 265
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80676df222baa4aa0800000000000000
+      internalID: -6175935775665392120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_12
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 263
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf5621362eeeffd0800000000000000
+      internalID: -2306144111366348852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_13
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 164
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad1a4c30fc137a20800000000000000
+      internalID: 3058820390043917736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_14
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 167
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ba8343946cb5280800000000000000
+      internalID: -9053424608187208824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_15
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 169
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26be419474199aa90800000000000000
+      internalID: -7302145585449735326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_16
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 161
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904a4f695ba206b20800000000000000
+      internalID: 3125545100805186569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_17
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 128
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff09f671daaeb940800000000000000
+      internalID: 5313872426964684793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_18
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 160
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b36e24ec6faf750800000000000000
+      internalID: 6339650791223475085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_19
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 156
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3177ab8a63508010800000000000000
+      internalID: 1189042018700456251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_20
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 142
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf74015172627670800000000000000
+      internalID: 8534992482650587077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_21
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 135
+        width: 42
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021fec2d0df056000800000000000000
+      internalID: 28446362212167968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_22
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 154
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ea6764fb1523c80800000000000000
+      internalID: -8344517277601321456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_23
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 149
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2b071ffe2b70dd0800000000000000
+      internalID: -2519848722872880391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_24
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 150
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf39a11cfd72e5520800000000000000
+      internalID: 2692633469185070075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_25
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 149
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f09447b0667f230800000000000000
+      internalID: 3672516220525547368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_26
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 132
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45848fd27bd6788d0800000000000000
+      internalID: -2844184006143489964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_27
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 140
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87659496c8f72f4b0800000000000000
+      internalID: -5408119961479981448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_28
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 139
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ae50795d2e74da0800000000000000
+      internalID: -5960546174811903407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_29
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 134
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d5feb7d64c27340800000000000000
+      internalID: 4860162922395950431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_30
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 136
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1446afd7f1bd187f0800000000000000
+      internalID: -611967146041646015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_31
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 117
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c787254705c770ab0800000000000000
+      internalID: -5041924572827191172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_32
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 109
+        width: 44
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d96b5545bae9720800000000000000
+      internalID: 2854907592503106968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_33
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 129
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77cbafa73f933faa0800000000000000
+      internalID: -6128490950018024329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_34
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 122
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df289335e0b18fd0800000000000000
+      internalID: -2341395832796336169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_35
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 116
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cecb066843ee4640800000000000000
+      internalID: 5066236530927587015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_36
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 121
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3133a4c5c2dc0050800000000000000
+      internalID: 5768216969604182331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_37
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 117
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e08cde29eb0f5810800000000000000
+      internalID: 1756135475839271137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_38
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 116
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1d74c4126c031f0800000000000000
+      internalID: -1067135265370811989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_39
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 100
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 230348182e6159b20800000000000000
+      internalID: 3140441477252132914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_40
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 109
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdfeae1a5d7b4f30800000000000000
+      internalID: 4560876873658072575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_41
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 109
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c83937e7e1974d0800000000000000
+      internalID: -3136442137033077665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_42
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 65
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a33f050f0074200800000000000000
+      internalID: 164100943572580869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_43
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 86
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e290be997feaa1fb0800000000000000
+      internalID: -4676232884608366290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_44
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 94
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e004968eca31420800000000000000
+      internalID: 2599611524121103948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_45
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 68
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ef40189339187b0800000000000000
+      internalID: -5223732217586057647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_46
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 69
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7de663cc9007a1e0800000000000000
+      internalID: -2186778420771885701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button_47
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 66
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2798134109f8240800000000000000
+      internalID: 4796210544577704664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      resume_button_0: -5135859331134405123
+      resume_button_1: 925362248010195324
+      resume_button_10: -3467224915424929652
+      resume_button_11: -6175935775665392120
+      resume_button_12: -2306144111366348852
+      resume_button_13: 3058820390043917736
+      resume_button_14: -9053424608187208824
+      resume_button_15: -7302145585449735326
+      resume_button_16: 3125545100805186569
+      resume_button_17: 5313872426964684793
+      resume_button_18: 6339650791223475085
+      resume_button_19: 1189042018700456251
+      resume_button_2: 6794475875539532573
+      resume_button_20: 8534992482650587077
+      resume_button_21: 28446362212167968
+      resume_button_22: -8344517277601321456
+      resume_button_23: -2519848722872880391
+      resume_button_24: 2692633469185070075
+      resume_button_25: 3672516220525547368
+      resume_button_26: -2844184006143489964
+      resume_button_27: -5408119961479981448
+      resume_button_28: -5960546174811903407
+      resume_button_29: 4860162922395950431
+      resume_button_3: -5499905060364840193
+      resume_button_30: -611967146041646015
+      resume_button_31: -5041924572827191172
+      resume_button_32: 2854907592503106968
+      resume_button_33: -6128490950018024329
+      resume_button_34: -2341395832796336169
+      resume_button_35: 5066236530927587015
+      resume_button_36: 5768216969604182331
+      resume_button_37: 1756135475839271137
+      resume_button_38: -1067135265370811989
+      resume_button_39: 3140441477252132914
+      resume_button_4: -3565804735507769713
+      resume_button_40: 4560876873658072575
+      resume_button_41: -3136442137033077665
+      resume_button_42: 164100943572580869
+      resume_button_43: -4676232884608366290
+      resume_button_44: 2599611524121103948
+      resume_button_45: -5223732217586057647
+      resume_button_46: -2186778420771885701
+      resume_button_47: 4796210544577704664
+      resume_button_5: -843919589627640534
+      resume_button_6: -4496474361199202801
+      resume_button_7: 4125501858341469359
+      resume_button_8: 5148493620889106712
+      resume_button_9: -4105801865564870112
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

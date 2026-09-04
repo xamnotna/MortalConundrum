@@ -274,7 +274,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -962450907
   m_SortingLayer: -1
-  m_SortingOrder: 7
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 78e263dfaf1a5a24da0479210a8ac82a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -617,7 +617,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -962450907
   m_SortingLayer: -1
-  m_SortingOrder: 7
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 78e263dfaf1a5a24da0479210a8ac82a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6139,6 +6139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrefabCityblockParent
       objectReference: {fileID: 0}
+    - target: {fileID: 5973857838618914529, guid: 471e4949bea7dbc4c9a58a7c4d59d15d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -235355746184712575, guid: dcba331063615654db5e42377c6ea4a2, type: 3}
     - target: {fileID: 6396794452743643526, guid: 471e4949bea7dbc4c9a58a7c4d59d15d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -9.4
