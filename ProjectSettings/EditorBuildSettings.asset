@@ -38,5 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TurnbattleSystem.unity
     guid: 84b08b881ed4679499057acbd4c66ef7
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2e075da63e5731244a67c6b87b4ebd97, type: 3}
   m_UseUCBPForAssetBundles: 0

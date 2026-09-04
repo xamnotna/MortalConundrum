@@ -27,6 +27,8 @@ public class EnemyManager : MonoBehaviour
 
                 newEnemy.MaxHealth = Mathf.RoundToInt(allEnemies[i].BaseHealth + (allEnemies[i].BaseHealth * levelModifier));
                 newEnemy.CurrentHealth = newEnemy.MaxHealth;
+                newEnemy.MaxMana = Mathf.RoundToInt(allEnemies[i].BaseMana + (allEnemies[i].BaseMana * levelModifier));
+                newEnemy.CurrentMana = newEnemy.MaxMana;
                 newEnemy.Strength = Mathf.RoundToInt(allEnemies[i].BaseStr + (allEnemies[i].BaseStr * levelModifier));
                 newEnemy.Magic = Mathf.RoundToInt(allEnemies[i].BaseMag + (allEnemies[i].BaseMag * levelModifier));
                 newEnemy.Defense = Mathf.RoundToInt(allEnemies[i].BaseDef + (allEnemies[i].BaseDef * levelModifier));
@@ -39,6 +41,11 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    public List<Enemy> GetCurrentEnemies()
+    {
+        return currentEnemies;
+    }
+
 }
 
 [System.Serializable]
@@ -48,6 +55,8 @@ public class Enemy
     public int Level;
     public int CurrentHealth;
     public int MaxHealth;
+    public int CurrentMana;
+    public int MaxMana;
     public int Strength;
     public int Magic;
     public int Defense;

@@ -20,5 +20,5 @@ MonoBehaviour:
   BaseDef: 5
   BaseMag: 5
   BaseInitiative: 5
-  MemberBattleVisualPrefab: {fileID: 0}
+  MemberBattleVisualPrefab: {fileID: 6205422578808860539, guid: e2a1f258a2678e34e8911c86f4e3d613, type: 3}
   MemberOverworldVisualPrefab: {fileID: 0}

@@ -9,6 +9,7 @@ public class EnemyInfo : ScriptableObject
     public string EnemyName;
     public int StartingLevel;
     public int BaseHealth;
+    public int BaseMana;
     public int BaseStr;
     public int BaseDef;
     public int BaseMag;

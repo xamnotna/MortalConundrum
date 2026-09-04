@@ -59,6 +59,9 @@ public class IsoSpriteSorting : MonoBehaviour
     public bool useSortingGroup;
     public SortingGroup sortingGroup;
 
+    private static int nextEntityId = 0;
+    private readonly int entityId = System.Threading.Interlocked.Increment(ref nextEntityId);
+
     private Transform t;
 
     public void SetupStaticCache()
@@ -156,7 +159,7 @@ public class IsoSpriteSorting : MonoBehaviour
 #if UNITY_EDITOR
     public void SortScene()
     {
-        IsoSpriteSorting[] isoSorters = FindObjectsByType<IsoSpriteSorting>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        IsoSpriteSorting[] isoSorters = FindObjectsByType<IsoSpriteSorting>(FindObjectsInactive.Include);
         for (int i = 0; i < isoSorters.Length; i++)
         {
             isoSorters[i].Setup();
@@ -367,4 +370,6 @@ public class IsoSpriteSorting : MonoBehaviour
     {
         IsoSpriteSortingManager.UnregisterSprite(this);
     }
+
+    public new EntityId GetEntityId() => new EntityId(entityId);
 }

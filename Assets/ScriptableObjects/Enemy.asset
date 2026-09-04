@@ -15,8 +15,9 @@ MonoBehaviour:
   EnemyName: PlaceHolder Enemy
   StartingLevel: 1
   BaseHealth: 2
+  BaseMana: 1000
   BaseStr: 1
   BaseDef: 2
   BaseMag: 0
   BaseInitiative: 1
-  EnemyBattleVisualPrefab: {fileID: 0}
+  EnemyVisualPrefab: {fileID: 4932650935561409905, guid: fa6ea6169daba0647a19e8c177937f81, type: 3}

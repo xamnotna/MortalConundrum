@@ -103,22 +103,7 @@ public class DialogueManager : MonoBehaviour
 
 
         // prevent deselection of choices
-        if (currentStory.currentChoices.Count > 0)
-        {
-            if (evt.currentSelectedGameObject == null)
-            {
-                evt.SetSelectedGameObject(choices[0]);
-            }
-        }
-
-        // if (evt.currentSelectedGameObject != null && evt.currentSelectedGameObject != sel)
-        // {
-        //     sel = evt.currentSelectedGameObject;
-        // }
-        // else if (sel != null && evt.currentSelectedGameObject == null)
-        // {
-        //     evt.SetSelectedGameObject(sel);
-        // }
+        selectFirstChoice();
 
 
         if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.E))
@@ -127,7 +112,7 @@ public class DialogueManager : MonoBehaviour
         }
         else if (currentStory.currentChoices.Count > 0 && Input.GetKeyDown(KeyCode.E))
         {
-            for (int i = 0; i < choices.Length; i++)
+            for (int i = 0; i < currentStory.currentChoices.Count; i++)
             {
                 if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
                 {
@@ -135,76 +120,10 @@ public class DialogueManager : MonoBehaviour
                     ContinueStory();
                     break;
                 }
+
             }
         }
 
-        /*  if (Input.GetKeyDown(KeyCode.E) && currentStory.currentChoices.Count > 0)
-         {
-             if (currentStory.currentChoices.Count > 0)
-             {
-                 for (int i = 0; i < choices.Length; i++)
-                 {
-                     if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
-                     {
-                         currentStory.ChooseChoiceIndex(i);
-                         ContinueStory();
-                         break;
-                     }
-                 }
-             }
-              else
-              {
-                  ContinueStory();
-              }
-         }   
-         else if (Input.GetKeyDown(KeyCode.E))
-         {
-             ContinueStory();
-         } */
-
-
-
-        /* if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (currentStory.currentChoices.Count > 0)
-            {
-                for (int i = 0; i < choices.Length; i++)
-                {
-                    if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
-                    {
-                        currentStory.ChooseChoiceIndex(i);
-                        ContinueStory();
-                        break;
-                    }
-                }
-            }
-            else if (Input.GetKeyDown(KeyCode.E))
-            {
-                ContinueStory();
-            }
-        } */
-
-
-        // handle selecting a choice when submit is pressed
-        //  if (Input.GetKeyDown(KeyCode.E))
-        // {
-        //     if (currentStory.currentChoices.Count > 0)
-        //     {
-        //     for (int i = 0; i < choices.Length; i++)
-        //     {
-        //         if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
-        //         {
-        //             currentStory.ChooseChoiceIndex(i);
-        //             ContinueStory();
-        //             break;
-        //         }
-        //     }
-        //     } 
-        //     else
-        //     {
-        //         ContinueStory();
-        //     }
-        // }
 
     }
 
@@ -258,6 +177,7 @@ public class DialogueManager : MonoBehaviour
             if (splitTag.Length != 2)
             {
                 Debug.LogError("Tag could not be approptiatley parsed: " + tag);
+                continue;
             }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
@@ -323,11 +243,17 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator selectFirstChoice()
     {
-        // Event Systems is requires we clear it first, then wait
+        // Event System requires that we clear it first, then wait
         // for at least one frame before we can set the selected object
         EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+        //yield return new WaitForEndOfFrame();
+        yield return null; // Wait one frame - more efficient than WaitForEndOfFrame
+
+        // Only set selected object if there are choices available
+        if (choices != null && choices.Length > 0 && choices[0] != null)
+        {
+            EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+        }
     }
 
     public void MakeChoice(int choiceIndex)

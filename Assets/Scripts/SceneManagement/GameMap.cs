@@ -96,16 +96,20 @@ public class GameMap : MonoBehaviour
                 }
             }
 
-            EventSystem.current.SetSelectedGameObject(stations[currentStationIndex]);
+            // Only set selected object if stations array and current station are valid
+            if (stations != null && stations.Length > 0 && currentStationIndex >= 0 && currentStationIndex < stations.Length && stations[currentStationIndex] != null)
+            {
+                EventSystem.current.SetSelectedGameObject(stations[currentStationIndex]);
+            }
 
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 stations[currentStationIndex].GetComponent<Button>().onClick.Invoke();
-            }   
+            }
 
 
 
-            
+
 
 
 
