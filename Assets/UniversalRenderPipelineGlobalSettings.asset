@@ -33,6 +33,7 @@ MonoBehaviour:
   m_Settings:
     m_SettingsList:
       m_List:
+<<<<<<< HEAD
       - rid: 2942771845339545600
       - rid: 2942771845339545601
       - rid: 2942771845339545602
@@ -74,6 +75,45 @@ MonoBehaviour:
     m_RuntimeSettings:
       m_List: []
   m_AssetVersion: 11
+=======
+      - rid: 8677018550993420288
+      - rid: 8677018550993420289
+      - rid: 8677018550993420290
+      - rid: 8677018550993420291
+      - rid: 8677018550993420292
+      - rid: 8677018550993420293
+      - rid: 8677018550993420294
+      - rid: 8677018550993420295
+      - rid: 8677018550993420296
+      - rid: 8677018550993420297
+      - rid: 8677018550993420298
+      - rid: 8677018550993420299
+      - rid: 8677018550993420300
+      - rid: 8677018550993420301
+      - rid: 8677018550993420302
+      - rid: 8677018550993420303
+      - rid: 8677018550993420304
+      - rid: 8677018550993420305
+      - rid: 8677018550993420306
+      - rid: 8677018550993420307
+      - rid: 8677018550993420308
+      - rid: 8677018550993420309
+      - rid: 8677018550993420310
+      - rid: 8677018550993420311
+      - rid: 8677018550993420312
+      - rid: 8677018550993420313
+      - rid: 8677018550993420314
+      - rid: 8677018550993420315
+      - rid: 8677018550993420316
+      - rid: 8227129113142362112
+      - rid: 8227129113142362113
+      - rid: 8227129113142362114
+      - rid: 8258888438531227648
+      - rid: 8258888438531227649
+    m_RuntimeSettings:
+      m_List: []
+  m_AssetVersion: 10
+>>>>>>> origin/LevelBuilding
   m_ObsoleteDefaultVolumeProfile: {fileID: 0}
   m_RenderingLayerNames:
   - Light Layer default
@@ -103,6 +143,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+<<<<<<< HEAD
     - rid: 1690410530761867264
       type: {class: URPTerrainShaderSetting, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
@@ -116,6 +157,9 @@ MonoBehaviour:
         m_TerrainDetailGrassBillboard: {fileID: 4800000, guid: 29868e73b638e48ca99a19ea58c48d90, type: 3}
         m_TerrainDetailGrass: {fileID: 4800000, guid: e507fdfead5ca47e8b9a768b51c291a1, type: 3}
     - rid: 2525704933154226176
+=======
+    - rid: 8227129113142362112
+>>>>>>> origin/LevelBuilding
       type: {class: RayTracingRenderPipelineResources, ns: UnityEngine.Rendering.UnifiedRayTracing, asm: Unity.UnifiedRayTracing.Runtime}
       data:
         m_Version: 1
@@ -128,17 +172,41 @@ MonoBehaviour:
         m_BuildHlbvh: {fileID: 7200000, guid: 2d70cd6be91bd7843a39a54b51c15b13, type: 3}
         m_RestructureBvh: {fileID: 7200000, guid: 56641cb88dcb31a4398a4997ef7a7a8c, type: 3}
         m_Scatter: {fileID: 7200000, guid: a2eaeefdac4637a44b734e85b7be9186, type: 3}
+<<<<<<< HEAD
     - rid: 2525704933154226177
+=======
+    - rid: 8227129113142362113
+>>>>>>> origin/LevelBuilding
       type: {class: OnTilePostProcessResource, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         m_Version: 0
         m_UberPostShader: {fileID: 4800000, guid: fe4f13c1004a07d4ea1e30bfd0326d9e, type: 3}
+<<<<<<< HEAD
     - rid: 2525704933154226178
+=======
+    - rid: 8227129113142362114
+>>>>>>> origin/LevelBuilding
       type: {class: URPReflectionProbeSettings, ns: UnityEngine.Rendering, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         version: 1
         useReflectionProbeRotation: 0
+<<<<<<< HEAD
     - rid: 2942771845339545600
+=======
+    - rid: 8258888438531227648
+      type: {class: UniversalRenderPipelineRuntimeTerrainShaders, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
+      data:
+        m_Version: 0
+        m_TerrainDetailLit: {fileID: 4800000, guid: f6783ab646d374f94b199774402a5144, type: 3}
+        m_TerrainDetailGrassBillboard: {fileID: 4800000, guid: 29868e73b638e48ca99a19ea58c48d90, type: 3}
+        m_TerrainDetailGrass: {fileID: 4800000, guid: e507fdfead5ca47e8b9a768b51c291a1, type: 3}
+    - rid: 8258888438531227649
+      type: {class: URPTerrainShaderSetting, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
+      data:
+        m_Version: 0
+        m_IncludeTerrainShaders: 1
+    - rid: 8677018550993420288
+>>>>>>> origin/LevelBuilding
       type: {class: Renderer2DResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         m_Version: 0
@@ -154,7 +222,11 @@ MonoBehaviour:
         m_DefaultUnlitMaterial: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
         m_DefaultMaskMaterial: {fileID: 2100000, guid: 15d0c3709176029428a0da2f8cecf0b5, type: 2}
         m_DefaultMesh2DLitMaterial: {fileID: 2100000, guid: 9452ae1262a74094f8a68013fbcd1834, type: 2}
+<<<<<<< HEAD
     - rid: 2942771845339545601
+=======
+    - rid: 8677018550993420289
+>>>>>>> origin/LevelBuilding
       type: {class: PostProcessData/ShaderResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         stopNanPS: {fileID: 4800000, guid: 1121bb4e615ca3c48b214e79e841e823, type: 3}
@@ -238,8 +310,13 @@ MonoBehaviour:
         m_TerrainDetailLit: {fileID: 0}
         m_TerrainDetailGrassBillboard: {fileID: 0}
         m_TerrainDetailGrass: {fileID: 0}
+<<<<<<< HEAD
     - rid: 2942771845339545610
       type: {class: ScreenSpaceAmbientOcclusionBlueNoiseResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
+=======
+    - rid: 8677018550993420298
+      type: {class: ScreenSpaceAmbientOcclusionDynamicResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
+>>>>>>> origin/LevelBuilding
       data:
         m_BlueNoise256Textures:
         - {fileID: 2800000, guid: 36f118343fc974119bee3d09e2111500, type: 3}

@@ -452,19 +452,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
+<<<<<<< HEAD
     Enabled: 0
     m_Value: 0
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20170927
   m_LegacyPriority: 10
+=======
+    Enabled: 1
+    m_Value: 10
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+>>>>>>> origin/LevelBuilding
   Target:
     TrackingTarget: {fileID: 2097764600}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 1
   Lens:
     FieldOfView: 60
+<<<<<<< HEAD
     OrthographicSize: 4
+=======
+    OrthographicSize: 7
+>>>>>>> origin/LevelBuilding
     NearClipPlane: 0.3
     FarClipPlane: 5000
     Dutch: 0
@@ -901,7 +914,7 @@ Camera:
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

@@ -348,6 +348,7 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 511780488031464663}
+<<<<<<< HEAD
     - target: {fileID: 1267830355712517573, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -360,10 +361,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: GameMap, Assembly-CSharp
       objectReference: {fileID: 0}
+=======
+>>>>>>> origin/LevelBuilding
     - target: {fileID: 1347952035824120834, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1997372848246185150, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -372,6 +376,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> origin/LevelBuilding
     - target: {fileID: 1997372848246185150, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -468,6 +474,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2230118038484062722, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2786462180229187494, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 138
@@ -480,9 +490,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 511780488031464663}
+    - target: {fileID: 4925419659097537623, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 5473976957035654638, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
       propertyPath: m_Name
       value: StationMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571231590212888692, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 7263473775524819907, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
       propertyPath: m_Sprite
@@ -492,6 +510,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 511780488031464663}
+    - target: {fileID: 7660008388105259782, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 7993775325335846052, guid: c301f94a8eec0b84085afd47f191f8a0, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -6
@@ -876,6 +898,10 @@ PrefabInstance:
     - target: {fileID: 9001004336575640975, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001004337391243424, guid: 017eef0c6c861af488133fb6d08d70b5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

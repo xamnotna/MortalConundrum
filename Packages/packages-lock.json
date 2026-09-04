@@ -1,5 +1,6 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "com.inkle.ink-unity-integration": {
       "version": "https://github.com/inkle/ink-unity-integration.git#upm",
       "depth": 0,
@@ -9,6 +10,10 @@
     },
     "com.unity.2d.common": {
       "version": "15.0.0",
+=======
+    "com.unity.2d.common": {
+      "version": "14.0.1",
+>>>>>>> origin/LevelBuilding
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -17,6 +22,10 @@
         "com.unity.collections": "2.4.3",
         "com.unity.mathematics": "1.1.0",
         "com.unity.modules.animation": "1.0.0",
+<<<<<<< HEAD
+=======
+        "com.unity.modules.uielements": "1.0.0",
+>>>>>>> origin/LevelBuilding
         "com.unity.modules.imageconversion": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -37,10 +46,21 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
+<<<<<<< HEAD
       "version": "2.0.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {}
+=======
+      "version": "1.8.30",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+>>>>>>> origin/LevelBuilding
     },
     "com.unity.cinemachine": {
       "version": "6.6.0",
@@ -59,7 +79,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collections": {
+<<<<<<< HEAD
       "version": "6.6.0",
+=======
+      "version": "6.5.0",
+>>>>>>> origin/LevelBuilding
       "depth": 1,
       "source": "builtin",
       "dependencies": {
@@ -82,7 +106,11 @@
       "dependencies": {}
     },
     "com.unity.ide.rider": {
+<<<<<<< HEAD
       "version": "3.0.40",
+=======
+      "version": "3.0.39",
+>>>>>>> origin/LevelBuilding
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -91,7 +119,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
+<<<<<<< HEAD
       "version": "2.0.28",
+=======
+      "version": "2.0.26",
+>>>>>>> origin/LevelBuilding
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -115,7 +147,11 @@
       "dependencies": {}
     },
     "com.unity.multiplayer.center": {
+<<<<<<< HEAD
       "version": "2.0.1",
+=======
+      "version": "1.0.1",
+>>>>>>> origin/LevelBuilding
       "depth": 0,
       "source": "builtin",
       "dependencies": {
@@ -125,6 +161,7 @@
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.6",
       "depth": 2,
+<<<<<<< HEAD
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -132,17 +169,24 @@
     "com.unity.profiling.core": {
       "version": "1.0.3",
       "depth": 2,
+=======
+>>>>>>> origin/LevelBuilding
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
+<<<<<<< HEAD
       "version": "17.6.0",
+=======
+      "version": "17.5.0",
+>>>>>>> origin/LevelBuilding
       "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.burst": "1.8.14",
         "com.unity.collections": "2.4.3",
+<<<<<<< HEAD
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.profiling.core": "1.0.3"
       }
@@ -163,6 +207,28 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "17.6.0"
+=======
+        "com.unity.modules.terrain": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      }
+    },
+    "com.unity.render-pipelines.universal": {
+      "version": "17.5.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "17.5.0",
+        "com.unity.shadergraph": "17.5.0",
+        "com.unity.render-pipelines.universal-config": "17.5.0"
+      }
+    },
+    "com.unity.render-pipelines.universal-config": {
+      "version": "17.5.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "17.5.0"
+>>>>>>> origin/LevelBuilding
       }
     },
     "com.unity.searcher": {
@@ -180,6 +246,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
+<<<<<<< HEAD
       "version": "17.6.0",
       "depth": 1,
       "source": "builtin",
@@ -187,6 +254,14 @@
         "com.unity.render-pipelines.core": "17.6.0",
         "com.unity.searcher": "4.9.3",
         "com.unity.graph-authoring": "1.0.0"
+=======
+      "version": "17.5.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "17.5.0",
+        "com.unity.searcher": "4.9.3"
+>>>>>>> origin/LevelBuilding
       }
     },
     "com.unity.splines": {
@@ -201,7 +276,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
+<<<<<<< HEAD
       "version": "1.8.0",
+=======
+      "version": "1.7.0",
+>>>>>>> origin/LevelBuilding
       "depth": 0,
       "source": "builtin",
       "dependencies": {
@@ -211,16 +290,26 @@
       }
     },
     "com.unity.test-framework.performance": {
+<<<<<<< HEAD
       "version": "6.6.0",
       "depth": 2,
       "source": "builtin",
+=======
+      "version": "3.5.0",
+      "depth": 2,
+      "source": "registry",
+>>>>>>> origin/LevelBuilding
       "dependencies": {
         "com.unity.test-framework": "1.1.33",
         "com.unity.modules.jsonserialize": "1.0.0"
       }
     },
     "com.unity.timeline": {
+<<<<<<< HEAD
       "version": "6.6.0",
+=======
+      "version": "1.8.13",
+>>>>>>> origin/LevelBuilding
       "depth": 0,
       "source": "builtin",
       "dependencies": {
@@ -231,7 +320,11 @@
       }
     },
     "com.unity.ugui": {
+<<<<<<< HEAD
       "version": "2.6.0",
+=======
+      "version": "2.5.0",
+>>>>>>> origin/LevelBuilding
       "depth": 0,
       "source": "builtin",
       "dependencies": {

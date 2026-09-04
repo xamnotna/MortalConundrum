@@ -5955,12 +5955,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
+<<<<<<< HEAD
     Enabled: 1
     m_Value: 10
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
+=======
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20170927
+  m_LegacyPriority: 10
+>>>>>>> origin/LevelBuilding
   Target:
     TrackingTarget: {fileID: 1929042840}
     LookAtTarget: {fileID: 0}
@@ -6691,6 +6700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowGroup: 0
   m_Priority: 0
+<<<<<<< HEAD
 --- !u!1 &1530246518
 GameObject:
   m_ObjectHideFlags: 0
@@ -6722,6 +6732,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> origin/LevelBuilding
 --- !u!212 &1593988068 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8099724479251655974, guid: c2b5d3993e60b0a4087e51d2936a98af, type: 3}
