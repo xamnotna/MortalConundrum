@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Animation/UI.meta
-guid: ae1096018c37ee64c8e3d1ab69ede127
-folderAsset: yes
-========
-guid: df19c121ca64e2f408107c89e483120f
->>>>>>>> LevelBuilding:Assets/Dialogue/NPCs/OldLady.ink.meta
-DefaultImporter:
+guid: 0063e1e05b7ed274b923474840ea964b
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: de698877a05f948e7ae43ed4baf0dcad, type: 3}
+  isMasterFile: 1
+  compileAsMasterFileOverride: 0

@@ -9,7 +9,14 @@ public class DialogTrigger : MonoBehaviour
 
     public void StartDialog()
     {
-        FindFirstObjectByType<DialogManager>().OpenDialog(messages, actors);
+        DialogManager dialogManager = FindAnyObjectByType<DialogManager>();
+        if (dialogManager == null)
+        {
+            Debug.LogError("DialogTrigger could not find a DialogManager instance.");
+            return;
+        }
+
+        dialogManager.OpenDialog(messages, actors);
     }
 }
 

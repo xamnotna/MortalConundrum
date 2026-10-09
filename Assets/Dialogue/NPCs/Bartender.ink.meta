@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/_Recovery/0.unity.meta
-guid: ee01f6f079ac98a488111b185fdd1316
-========
-guid: 9eff1a15cc4279b409b283e6876602e0
->>>>>>>> LevelBuilding:Assets/Dialogue/NPCs/Bartender.ink.meta
-DefaultImporter:
+guid: 040d4cbc1b306d44c8a82ec2835d6df9
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: de698877a05f948e7ae43ed4baf0dcad, type: 3}
+  isMasterFile: 1
+  compileAsMasterFileOverride: 0

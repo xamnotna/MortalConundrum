@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Prefabs/BattleVisual.meta
-guid: d74bc8e02929fff4b946c4f99fb59261
-folderAsset: yes
-========
-guid: 71e8497b25fe91c41b98ba9fba37d4e8
->>>>>>>> LevelBuilding:Assets/Dialogue/NPCs/Worker 1.ink.meta
-DefaultImporter:
+guid: 6646dbb5586691f4699a715d21aba0e6
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: de698877a05f948e7ae43ed4baf0dcad, type: 3}
+  isMasterFile: 1
+  compileAsMasterFileOverride: 0

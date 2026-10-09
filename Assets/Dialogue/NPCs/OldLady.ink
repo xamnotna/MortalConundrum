@@ -1,5 +1,4 @@
 huh? who's that? #speaker:Britt-Marie #portrait:NPC_oldlady #layout:left
-huh? who's that? #speaker:Britt-Marie #portrait:NPC_oldlady #layout:left
 Speak up will you dear? These old ears has been around longer than most streets in this very city #speaker:Britt-Marie #portrait:NPC_oldlady #layout:left
 -> main
 

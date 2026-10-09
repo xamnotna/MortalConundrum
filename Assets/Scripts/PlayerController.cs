@@ -4,22 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    /* public static vector3 TempPosition;
-    TempPosition = player.transform.position; */
     public float speed = 3.0f;
 
     public int maxHealth = 100;
 
     public int health { get { return currentHealth; } }
-    public int currentHealth; //test remove later public to make it private
+    public int currentHealth;
     public VectorValue startingPosition;
-
-    /*  [System.Serializable]
-     public class VectorValue
-     {
-        public Vector2 initialValue;
-     } */
 
 
     Rigidbody2D rigidbody2d;
@@ -37,7 +28,6 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        //DontDestroyOnLoad(gameObject);
         transform.position = startingPosition.initialValue;
     }
 
@@ -61,20 +51,15 @@ public class PlayerController : MonoBehaviour
 
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
+        DialogueManager dialogueManager = DialogueManager.GetInstance();
+        bool isDialoguePlaying = dialogueManager != null && dialogueManager.dialogueIsPlaying;
 
-
-        //if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !DialogueManager.Instance.dialogueIsPlaying)
         Vector2 directionVector = new Vector2(horizontalInput, verticalInput);
-        //Vector directionVector = new Vector3(horizontalInput, verticalInput, 0.0f);
-        //Vector2 lookDirection = new Vector2(directionVector.x, directionVector.y);
 
-
-        if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !DialogueManager.GetInstance().dialogueIsPlaying)
-        //if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !DialogueManager.Instance.dialogueIsPlaying)
+        if ((!Mathf.Approximately(directionVector.x, 0.0f) || !Mathf.Approximately(directionVector.y, 0.0f)) && !isDialoguePlaying)
         {
             lookDirection.Set(directionVector.x, directionVector.y);
             lookDirection.Normalize();
-            //dialogueActive = false;
         }
 
 
@@ -87,30 +72,19 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
         }
 
-        // if DialogManager.isActive == true then stop player from walking
-
         if (directionVector.sqrMagnitude > 0)
         {
             lastMoveDir = lookDirection;
         }
 
-        // 8 directions of movement
-
-
-
-
-
         animator.SetFloat("xMove", lookDirection.x);
         animator.SetFloat("yMove", lookDirection.y);
         animator.SetFloat("Speed", directionVector.sqrMagnitude);
-        /*  if (DialogueManager.Instance.dialogueIsPlaying == true)
-             animator.SetFloat("yLastMove", lookDirection.y); */
         animator.SetFloat("xLastMove", lookDirection.x);
         animator.SetFloat("yLastMove", lookDirection.y);
-        //dialogueIsPlaying = true;
         animator.SetBool("Dialogue", dialogueActive);
 
-        if (DialogueManager.GetInstance().dialogueIsPlaying == true)
+        if (isDialoguePlaying)
         {
             dialogueActive = true;
             speed = 0.0f;
@@ -130,29 +104,9 @@ public class PlayerController : MonoBehaviour
         else
         {
             dialogueActive = false;
-            speed = 3.0f; ;
+            speed = 3.0f;
         }
-
-        // if player is in dialog then stop player from walking and unable to look around
-        /* if (DialogueManager.dialogueIsPlaying == true) 
-        {
-        animator.SetFloat("Speed", 0);
-        speed = 0;
-        }
-        else
-        {
-        speed = 3.0f;
-        } */
-
-        //xLastMove and yLastMove are used to store the last direction the player was moving in
-        //animator.SetFloat("xLastMove", lastMoveDir.x);
-        //animator.SetFloat("yLastMove", lastMoveDir.y);
-
-        // change the cordiantes of the player in the new scene
     }
-
-
-
 
     void FixedUpdate()
     {

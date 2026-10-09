@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/misc/Hpbar_Red.png.meta
-guid: 5d133e0056c9bdb419cc94537c39a898
+guid: 52d2baf667c8f0743b7088def77bcd8a
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 3365911267687197614
-    second: Hpbar_Red_0
-========
-guid: dcba331063615654db5e42377c6ea4a2
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -235355746184712575
-    second: Map GUI_0
->>>>>>>> LevelBuilding:Assets/Art/Sprites/misc/Map GUI.tif.meta
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,11 +39,11 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -65,7 +53,9 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationMethod: 0
   spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -75,9 +65,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
@@ -97,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -107,49 +97,12 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Art/Sprites/misc/Hpbar_Red.png.meta
-      name: Hpbar_Red_0
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 35
-        width: 337
-        height: 45
-========
-      name: Map GUI_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
->>>>>>>> LevelBuilding:Assets/Art/Sprites/misc/Map GUI.tif.meta
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-<<<<<<<< HEAD:Assets/Art/Sprites/misc/Hpbar_Red.png.meta
-      spriteID: eabeaffe67e16be20800000000000000
-      internalID: 3365911267687197614
-========
-      spriteID: 18e20d02239dbbcf0800000000000000
-      internalID: -235355746184712575
->>>>>>>> LevelBuilding:Assets/Art/Sprites/misc/Map GUI.tif.meta
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -158,12 +111,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-<<<<<<<< HEAD:Assets/Art/Sprites/misc/Hpbar_Red.png.meta
-      Hpbar_Red_0: 3365911267687197614
-========
-      Map GUI_0: -235355746184712575
->>>>>>>> LevelBuilding:Assets/Art/Sprites/misc/Map GUI.tif.meta
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

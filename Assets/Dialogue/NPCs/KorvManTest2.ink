@@ -1,5 +1,4 @@
 Why good day sir! #speaker:Unknown fella #portrait:korvman_happy #layout:left
-Why good day sir! #speaker:Unknown fella #portrait:korvman_happy #layout:left
 Don't you mean evening? #speaker:Roland #portrait:player_sceptical #layout:left
 -> main
 
@@ -12,5 +11,5 @@ Sorry I'm all of out of hot dogs #speaker:Unknown fella #portrait:korvman_neutra
 Dark? What do you mean? #speaker:Unknown fella #portrait:korvman_neutral #layout:left
 -> main
 * [See you around]
-See you later then #speaker:Roland #portrait:player_neutral
+See you later then #speaker:Roland #portrait:player_neutral #layout:left
 -> END

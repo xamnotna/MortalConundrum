@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine.EventSystems;
@@ -22,9 +21,9 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesTexts; //text to display choices
 
     private Story currentStory; //ink story
+    private bool isExitingDialogue;
+    private bool waitingForAdvanceKeyRelease;
 
-    //public bool dialogueIsPlaying {get; private set;} //check if dialogue is playing
-    //public static bool dialogueIsPlaying = false;
     public bool dialogueIsPlaying { get; private set; }
 
     private static DialogueManager instance;
@@ -33,20 +32,8 @@ public class DialogueManager : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait"; //tag to identify portraits in ink JSON file
     private const string LAYOUT_TAG = "layout"; //tag to identify layout in ink JSON file
 
-    EventSystem evt;
-
     private void Awake()
     {
-        /* if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else // if there is already an instance of this object, destroy it
-        {
-            Destroy(gameObject);
-        } */
-
         if (instance != null)
         {
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
@@ -64,7 +51,8 @@ public class DialogueManager : MonoBehaviour
 
         dialoguePanel.SetActive(false);
         dialogueIsPlaying = false;
-        evt = EventSystem.current;
+        isExitingDialogue = false;
+        waitingForAdvanceKeyRelease = false;
 
         layoutAnimator = dialoguePanel.GetComponent<Animator>();
 
@@ -76,10 +64,6 @@ public class DialogueManager : MonoBehaviour
             choice.SetActive(false);
         }
         choicesTexts = new TextMeshProUGUI[choices.Length];
-        // for (int i = 0; i < choices.Length; i++)
-        // {
-        //     choicesTexts[i] = choices[i].GetComponentInChildren<TextMeshProUGUI>();
-        // }
 
         int index = 0;
         foreach (GameObject choice in choices)
@@ -87,23 +71,32 @@ public class DialogueManager : MonoBehaviour
             choicesTexts[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
-
-
-
-
     }
-    //GameObject sel;
+
     private void Update()
     {
         // return if dialogue is not playing
-        if (!dialogueIsPlaying)
+        if (!dialogueIsPlaying || currentStory == null)
         {
             return;
         }
 
+        // Ignore advance input until the key used to start dialogue is released.
+        // This avoids consuming the start press as an immediate "continue".
+        if (waitingForAdvanceKeyRelease)
+        {
+            if (!Input.GetKey(KeyCode.E))
+            {
+                waitingForAdvanceKeyRelease = false;
+            }
+            return;
+        }
 
-        // prevent deselection of choices
-        selectFirstChoice();
+        // prevent choice deselection while choice prompts are active
+        if (currentStory.currentChoices.Count > 0 && EventSystem.current != null && EventSystem.current.currentSelectedGameObject == null)
+        {
+            StartCoroutine(selectFirstChoice());
+        }
 
 
         if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.E))
@@ -112,9 +105,25 @@ public class DialogueManager : MonoBehaviour
         }
         else if (currentStory.currentChoices.Count > 0 && Input.GetKeyDown(KeyCode.E))
         {
-            for (int i = 0; i < currentStory.currentChoices.Count; i++)
+            int selectableChoiceCount = Mathf.Min(currentStory.currentChoices.Count, choices.Length);
+            GameObject selectedChoice = EventSystem.current != null ? EventSystem.current.currentSelectedGameObject : null;
+
+            if (selectedChoice == null)
             {
-                if (choices[i].gameObject.activeSelf && EventSystem.current.currentSelectedGameObject == choices[i])
+                for (int i = 0; i < selectableChoiceCount; i++)
+                {
+                    if (choices[i] != null && choices[i].activeSelf)
+                    {
+                        currentStory.ChooseChoiceIndex(i);
+                        ContinueStory();
+                        return;
+                    }
+                }
+            }
+
+            for (int i = 0; i < selectableChoiceCount; i++)
+            {
+                if (choices[i] != null && choices[i].activeSelf && selectedChoice == choices[i])
                 {
                     currentStory.ChooseChoiceIndex(i);
                     ContinueStory();
@@ -131,6 +140,7 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+        waitingForAdvanceKeyRelease = Input.GetKey(KeyCode.E);
         dialoguePanel.SetActive(true);
 
         displayNameText.text = "???";
@@ -143,15 +153,35 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator ExitDialogueMode()
     {
+        isExitingDialogue = true;
         yield return new WaitForSeconds(0.2f);
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        currentStory = null;
+        waitingForAdvanceKeyRelease = false;
+        isExitingDialogue = false;
+
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+
+        foreach (GameObject choice in choices)
+        {
+            choice.SetActive(false);
+        }
     }
 
     private void ContinueStory()
     {
+        if (currentStory == null)
+        {
+            Debug.LogWarning("ContinueStory called without an active story.");
+            return;
+        }
+
         if (currentStory.canContinue)
         {
             // set text for the current line of dialogue
@@ -163,7 +193,10 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            StartCoroutine(ExitDialogueMode());
+            if (!isExitingDialogue)
+            {
+                StartCoroutine(ExitDialogueMode());
+            }
         }
     }
 
@@ -209,55 +242,72 @@ public class DialogueManager : MonoBehaviour
         List<Choice> currentChoices = currentStory.currentChoices;
 
         // defensive check to make sure there are no more choices than the UI can support
+        int choiceCountToDisplay = Mathf.Min(currentChoices.Count, choices.Length);
         if (currentChoices.Count > choices.Length)
         {
             Debug.LogError("More choices were given than the UI can support. Number of choices given: "
             + currentChoices.Count);
-            //return; // return if there are more choices than the UI can support
         }
 
-        int index = 0;
         // enable and initialize the choices up to the amount of choices for this line of dialogue
-        foreach (Choice choice in currentChoices)
+        for (int i = 0; i < choiceCountToDisplay; i++)
         {
-            choices[index].gameObject.SetActive(true);
-            choicesTexts[index].text = choice.text;
-            index++;
+            choices[i].gameObject.SetActive(true);
+            choicesTexts[i].text = currentChoices[i].text;
         }
+
         // go through the rest of the choices and disable them
-        for (int i = index; i < choices.Length; i++)
+        for (int i = choiceCountToDisplay; i < choices.Length; i++)
         {
             choices[i].gameObject.SetActive(false);
         }
 
-        // select the first choice if there are any
-        /* if (currentChoices.Count > 0)
-        {
-            StartCoroutine(selectFirstChoice());
-        } */
-
         StartCoroutine(selectFirstChoice());
-
-
     }
 
     private IEnumerator selectFirstChoice()
     {
+        EventSystem currentEventSystem = EventSystem.current;
+        if (currentEventSystem == null)
+        {
+            yield break;
+        }
+
         // Event System requires that we clear it first, then wait
         // for at least one frame before we can set the selected object
-        EventSystem.current.SetSelectedGameObject(null);
-        //yield return new WaitForEndOfFrame();
+        currentEventSystem.SetSelectedGameObject(null);
         yield return null; // Wait one frame - more efficient than WaitForEndOfFrame
 
-        // Only set selected object if there are choices available
-        if (choices != null && choices.Length > 0 && choices[0] != null)
+        if (!dialogueIsPlaying || currentStory == null || currentStory.currentChoices.Count == 0)
         {
-            EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+            yield break;
+        }
+
+        // Only set selected object if there are choices available
+        for (int i = 0; i < choices.Length; i++)
+        {
+            if (choices[i] != null && choices[i].activeInHierarchy)
+            {
+                currentEventSystem.SetSelectedGameObject(choices[i].gameObject);
+                yield break;
+            }
         }
     }
 
     public void MakeChoice(int choiceIndex)
     {
+        if (!dialogueIsPlaying || currentStory == null)
+        {
+            Debug.LogWarning("MakeChoice called without an active dialogue.");
+            return;
+        }
+
+        if (choiceIndex < 0 || choiceIndex >= currentStory.currentChoices.Count)
+        {
+            Debug.LogError("MakeChoice received an out-of-range index: " + choiceIndex);
+            return;
+        }
+
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
     }
