@@ -28,7 +28,7 @@
       "dependencies": {}
     },
     "com.unity.ai.navigation": {
-      "version": "2.0.14",
+      "version": "2.0.16",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -100,7 +100,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.20.0",
+      "version": "1.20.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -185,12 +185,12 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "17.6.0",
-        "com.unity.searcher": "4.9.3",
+        "com.unity.searcher": "4.9.5",
         "com.unity.graph-authoring": "1.0.0"
       }
     },
     "com.unity.splines": {
-      "version": "2.9.0",
+      "version": "2.9.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
