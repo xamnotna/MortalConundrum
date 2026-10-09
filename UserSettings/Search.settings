@@ -1,4 +1,6 @@
 trackSelection = true
+refreshSearchWindowsInPlayMode = false
+pickerAdvancedUI = false
 fetchPreview = true
 defaultFlags = 0
 keepOpen = false
@@ -10,6 +12,10 @@ scopes = {
 	"last_search.DA949528" = "Manager"
 	"OpenInspectorPreview.DA949528" = "0"
 	"currentGroup.DA949528" = "settings"
+	"picker_window_position_offset.00000000" = "88;36;320;550"
+	"picker_visibility_flags.00000000" = "0"
+	"picker_item_size.00000000" = "1"
+	"picker_inspector.00000000" = "0"
 }
 providers = {
 	adb = {
@@ -52,6 +58,16 @@ providers = {
 		priority = 50
 		defaultAction = null
 	}
+	presets_provider = {
+		active = false
+		priority = -10
+		defaultAction = null
+	}
+	profilermarkers = {
+		active = false
+		priority = 100
+		defaultAction = null
+	}
 }
 objectSelectors = {
 }
@@ -62,9 +78,16 @@ searchItemFavorites = [
 ]
 savedSearchesSortOrder = 0
 showSavedSearchPanel = false
+hideTabs = false
+indexOnEditorStartup = true
+logIndexingPerformanceReport = false
 expandedQueries = [
 ]
 queryBuilder = false
-ignoredProperties = "id;name;classname;imagecontentshash"
+ignoredProperties = "addedobjectfileids;classname;correspondingsourceobject;editorclassidentifier;editorhideflags;fileid;gameobject;id;imagecontentshash;isprefabvariant;name;objecthideflags;pathid;prefabasset;prefabinstance;script"
 helperWidgetCurrentArea = "all"
 disabledIndexers = ""
+minIndexVariations = 2
+findProviderIndexHelper = true
+itemIconSize = 32
+version = 1

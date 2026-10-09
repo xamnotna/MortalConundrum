@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 public static class TopologicalSort
 {
-    private static readonly Dictionary<int, bool> circularDepData = new Dictionary<int, bool>();
+    private static readonly Dictionary<EntityId, bool> circularDepData = new();
     private static readonly List<IsoSpriteSorting> circularDepStack = new List<IsoSpriteSorting>(64);
 
-    private static readonly HashSet<int> visited = new HashSet<int>();
+
+    private static readonly HashSet<EntityId> visited = new();
     private static readonly List<IsoSpriteSorting> allSprites = new List<IsoSpriteSorting>(64);
     public static List<IsoSpriteSorting> Sort(List<IsoSpriteSorting> staticSprites, List<IsoSpriteSorting> movableSprites, List<IsoSpriteSorting> sorted)
     {
@@ -48,9 +49,9 @@ public static class TopologicalSort
         return sorted;
     }
 
-    private static void Visit(IsoSpriteSorting item, List<IsoSpriteSorting> sorted, HashSet<int> visited)
+    private static void Visit(IsoSpriteSorting item, List<IsoSpriteSorting> sorted, HashSet<EntityId> visited)
     {
-        int id = item.GetInstanceID();
+        EntityId id = item.GetEntityId();
         if (!visited.Contains(id))
         {
             visited.Add(id);
@@ -72,12 +73,12 @@ public static class TopologicalSort
         }
     }
 
-    private static bool RemoveCircularDependencies(IsoSpriteSorting item, List<IsoSpriteSorting> _circularDepStack, Dictionary<int, bool> _circularDepData)
+    private static bool RemoveCircularDependencies(IsoSpriteSorting item, List<IsoSpriteSorting> _circularDepStack, Dictionary<EntityId, bool> _circularDepData)
     {
         _circularDepStack.Add(item);
         bool removedDependency = false;
 
-        int id = item.GetInstanceID();
+        EntityId id = item.GetEntityId();
         bool alreadyVisited = _circularDepData.TryGetValue(id, out bool inProcess);
         if (alreadyVisited)
         {

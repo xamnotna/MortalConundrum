@@ -9,19 +9,28 @@ public class DialogTrigger : MonoBehaviour
 
     public void StartDialog()
     {
-        FindObjectOfType<DialogManager>().OpenDialog(messages, actors);
+        DialogManager dialogManager = FindAnyObjectByType<DialogManager>();
+        if (dialogManager == null)
+        {
+            Debug.LogError("DialogTrigger could not find a DialogManager instance.");
+            return;
+        }
+
+        dialogManager.OpenDialog(messages, actors);
     }
 }
 
 
 [System.Serializable]
-public class Message {
+public class Message
+{
     public int actorId;
     public string message;
 }
 
 [System.Serializable]
-public class Actor {
+public class Actor
+{
     public string name;
     public Sprite sprite;
 

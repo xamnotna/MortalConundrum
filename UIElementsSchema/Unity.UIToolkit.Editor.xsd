@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Unity.UIToolkit.Editor" elementFormDefault="qualified" targetNamespace="Unity.UIToolkit.Editor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
+  <xs:import schemaLocation="UnityEngine.xsd" namespace="UnityEngine" />
+  <xs:complexType name="StyleScaleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="UnityEngine.UIElements" base="q1:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q1:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleScaleField" xmlns:q2="UnityEngine.UIElements" substitutionGroup="q2:BindableElement" type="tns:StyleScaleFieldType" />
+  <xs:complexType name="UxmlAttributesViewType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="UnityEngine.UIElements" base="q3:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UxmlAttributesView" xmlns:q4="UnityEngine.UIElements" substitutionGroup="q4:VisualElement" type="tns:UxmlAttributesViewType" />
+  <xs:complexType name="MaterialDefinitionStyleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="UnityEngine.UIElements" base="q5:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MaterialDefinitionStyleField" xmlns:q6="UnityEngine.UIElements" substitutionGroup="q6:BindableElement" type="tns:MaterialDefinitionStyleFieldType" />
+  <xs:complexType name="BackgroundPositionStyleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="UnityEngine.UIElements" base="q7:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="center" name="value" type="xs:string" />
+        <xs:attribute default="Horizontal" name="mode" type="q7:BackgroundPosition_AxisType" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BackgroundPositionStyleField" xmlns:q8="UnityEngine.UIElements" substitutionGroup="q8:BindableElement" type="tns:BackgroundPositionStyleFieldType" />
+  <xs:complexType name="TransformOriginSelectorType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="UnityEngine.UIElements" base="q9:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransformOriginSelector" xmlns:q10="UnityEngine.UIElements" substitutionGroup="q10:VisualElement" type="tns:TransformOriginSelectorType" />
+  <xs:complexType name="MarginFoldoutFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OverrideFoldoutType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OverrideFoldoutType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OverrideRowType">
+        <xs:choice />
+        <xs:attribute name="text" type="xs:string" />
+        <xs:attribute name="documentation-url" type="xs:string" />
+        <xs:attribute name="documentation-tooltip" type="xs:string" />
+        <xs:attribute default="true" name="value" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OverrideRowType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="UnityEngine.UIElements" base="q11:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OverrideRow" xmlns:q12="UnityEngine.UIElements" substitutionGroup="q12:VisualElement" type="tns:OverrideRowType" />
+  <xs:element name="OverrideFoldout" substitutionGroup="tns:OverrideRow" type="tns:OverrideFoldoutType" />
+  <xs:element name="MarginFoldoutField" substitutionGroup="tns:OverrideFoldout" type="tns:MarginFoldoutFieldType" />
+  <xs:complexType name="TextAlignToggleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="UnityEngine.UIElements" base="q13:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="UpperLeft" name="value" xmlns:q14="UnityEngine" type="q14:TextAnchorType" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextAlignToggleField" xmlns:q15="UnityEngine.UIElements" substitutionGroup="q15:BindableElement" type="tns:TextAlignToggleFieldType" />
+  <xs:complexType name="StyleIntFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="UnityEngine.UIElements" base="q16:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q16:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleIntField" xmlns:q17="UnityEngine.UIElements" substitutionGroup="q17:BindableElement" type="tns:StyleIntFieldType" />
+  <xs:complexType name="StyleBackgroundFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="UnityEngine.UIElements" base="q18:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q18:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleBackgroundField" xmlns:q19="UnityEngine.UIElements" substitutionGroup="q19:BindableElement" type="tns:StyleBackgroundFieldType" />
+  <xs:complexType name="UnityTextAlignStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="UnityEngine.UIElements" base="q20:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q20:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="upperleft" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnityTextAlignStyleEnumField" xmlns:q21="UnityEngine.UIElements" substitutionGroup="q21:BindableElement" type="tns:UnityTextAlignStyleEnumFieldType" />
+  <xs:complexType name="UICanvasDocumentRootType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="UnityEngine.UIElements" base="q22:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UICanvasDocumentRoot" xmlns:q23="UnityEngine.UIElements" substitutionGroup="q23:VisualElement" type="tns:UICanvasDocumentRootType" />
+  <xs:complexType name="UxmlSerializedDataPropertyViewType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="UnityEngine.UIElements" base="q24:BindableElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UxmlSerializedDataPropertyView" xmlns:q25="UnityEngine.UIElements" substitutionGroup="q25:BindableElement" type="tns:UxmlSerializedDataPropertyViewType" />
+  <xs:complexType name="WrapStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="UnityEngine.UIElements" base="q26:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q26:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="nowrap" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WrapStyleEnumField" xmlns:q27="UnityEngine.UIElements" substitutionGroup="q27:BindableElement" type="tns:WrapStyleEnumFieldType" />
+  <xs:complexType name="VisualElementBindingsInspectorElementType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="UnityEngine.UIElements" base="q28:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisualElementBindingsInspectorElement" xmlns:q29="UnityEngine.UIElements" substitutionGroup="q29:VisualElement" type="tns:VisualElementBindingsInspectorElementType" />
+  <xs:complexType name="SpacingBoxModelFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OverrideRowType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SpacingBoxModelField" substitutionGroup="tns:OverrideRow" type="tns:SpacingBoxModelFieldType" />
+  <xs:complexType name="DisplayStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="UnityEngine.UIElements" base="q30:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q30:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="flex" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DisplayStyleEnumField" xmlns:q31="UnityEngine.UIElements" substitutionGroup="q31:BindableElement" type="tns:DisplayStyleEnumFieldType" />
+  <xs:complexType name="StyleFontDefinitionFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="UnityEngine.UIElements" base="q32:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q32:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleFontDefinitionField" xmlns:q33="UnityEngine.UIElements" substitutionGroup="q33:BindableElement" type="tns:StyleFontDefinitionFieldType" />
+  <xs:complexType name="StyleRatioFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="UnityEngine.UIElements" base="q34:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q34:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleRatioField" xmlns:q35="UnityEngine.UIElements" substitutionGroup="q35:BindableElement" type="tns:StyleRatioFieldType" />
+  <xs:complexType name="StyleRuleHeaderType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="UnityEngine.UIElements" base="q36:VisualElementType">
+        <xs:choice />
+        <xs:attribute default="project://database/Library/unity%20editor%20resources?fileID=5153532147187264368&amp;guid=0000000000000000d000000000000000&amp;type=0#StyleSheet Icon" name="type-icon" type="xs:string" />
+        <xs:attribute default="Rule" name="type-name" type="xs:string" />
+        <xs:attribute name="rule-name" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleRuleHeader" xmlns:q37="UnityEngine.UIElements" substitutionGroup="q37:VisualElement" type="tns:StyleRuleHeaderType" />
+  <xs:complexType name="TextShadowOffsetFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="UnityEngine.UIElements" base="q38:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0,0" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextShadowOffsetField" xmlns:q39="UnityEngine.UIElements" substitutionGroup="q39:BindableElement" type="tns:TextShadowOffsetFieldType" />
+  <xs:complexType name="PercentSliderType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="UnityEngine.UIElements" base="q40:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:float" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PercentSlider" xmlns:q41="UnityEngine.UIElements" substitutionGroup="q41:BindableElement" type="tns:PercentSliderType" />
+  <xs:complexType name="PositionStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="UnityEngine.UIElements" base="q42:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q42:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="relative" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PositionStyleEnumField" xmlns:q43="UnityEngine.UIElements" substitutionGroup="q43:BindableElement" type="tns:PositionStyleEnumFieldType" />
+  <xs:complexType name="StyleTransitionListViewType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="UnityEngine.UIElements" base="q44:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleTransitionListView" xmlns:q45="UnityEngine.UIElements" substitutionGroup="q45:VisualElement" type="tns:StyleTransitionListViewType" />
+  <xs:complexType name="StylePercentSliderFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q46="UnityEngine.UIElements" base="q46:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q46:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StylePercentSliderField" xmlns:q47="UnityEngine.UIElements" substitutionGroup="q47:BindableElement" type="tns:StylePercentSliderFieldType" />
+  <xs:complexType name="StyleMaterialDefinitionFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q48="UnityEngine.UIElements" base="q48:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q48:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleMaterialDefinitionField" xmlns:q49="UnityEngine.UIElements" substitutionGroup="q49:BindableElement" type="tns:StyleMaterialDefinitionFieldType" />
+  <xs:complexType name="FilterStyleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q50="UnityEngine.UIElements" base="q50:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FilterStyleField" xmlns:q51="UnityEngine.UIElements" substitutionGroup="q51:BindableElement" type="tns:FilterStyleFieldType" />
+  <xs:complexType name="UssCodePreviewType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q52="UnityEngine.UIElements" base="q52:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UssCodePreview" xmlns:q53="UnityEngine.UIElements" substitutionGroup="q53:VisualElement" type="tns:UssCodePreviewType" />
+  <xs:complexType name="StyleTextShadowFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q54="UnityEngine.UIElements" base="q54:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q54:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0px 0px rgba(0, 0, 0, 0)" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleTextShadowField" xmlns:q55="UnityEngine.UIElements" substitutionGroup="q55:BindableElement" type="tns:StyleTextShadowFieldType" />
+  <xs:complexType name="VisualTreeAssetInspectorActionsViewType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q56="UnityEngine.UIElements" base="q56:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisualTreeAssetInspectorActionsView" xmlns:q57="UnityEngine.UIElements" substitutionGroup="q57:VisualElement" type="tns:VisualTreeAssetInspectorActionsViewType" />
+  <xs:complexType name="PositionFoldoutType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q58="UnityEngine.UIElements" base="q58:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PositionFoldout" xmlns:q59="UnityEngine.UIElements" substitutionGroup="q59:VisualElement" type="tns:PositionFoldoutType" />
+  <xs:complexType name="StyleInspectorElementType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q60="UnityEngine.UIElements" base="q60:VisualElementType">
+        <xs:choice />
+        <xs:attribute name="content-asset" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleInspectorElement" xmlns:q61="UnityEngine.UIElements" substitutionGroup="q61:VisualElement" type="tns:StyleInspectorElementType" />
+  <xs:complexType name="StyleLengthFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q62="UnityEngine.UIElements" base="q62:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q62:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+        <xs:attribute default="true" name="show-unit-as-dropdown" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleLengthField" xmlns:q63="UnityEngine.UIElements" substitutionGroup="q63:BindableElement" type="tns:StyleLengthFieldType" />
+  <xs:complexType name="SliceTypeStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q64="UnityEngine.UIElements" base="q64:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q64:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="sliced" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SliceTypeStyleEnumField" xmlns:q65="UnityEngine.UIElements" substitutionGroup="q65:BindableElement" type="tns:SliceTypeStyleEnumFieldType" />
+  <xs:complexType name="BorderBoxModelFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OverrideRowType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BorderBoxModelField" substitutionGroup="tns:OverrideRow" type="tns:BorderBoxModelFieldType" />
+  <xs:complexType name="UxmlAttributeFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q66="UnityEngine.UIElements" base="q66:VisualElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="binding-path" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UxmlAttributeField" xmlns:q67="UnityEngine.UIElements" substitutionGroup="q67:VisualElement" type="tns:UxmlAttributeFieldType" />
+  <xs:complexType name="StyleFloatFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q68="UnityEngine.UIElements" base="q68:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q68:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleFloatField" xmlns:q69="UnityEngine.UIElements" substitutionGroup="q69:BindableElement" type="tns:StyleFloatFieldType" />
+  <xs:complexType name="JustifyStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q70="UnityEngine.UIElements" base="q70:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q70:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="flexstart" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JustifyStyleEnumField" xmlns:q71="UnityEngine.UIElements" substitutionGroup="q71:BindableElement" type="tns:JustifyStyleEnumFieldType" />
+  <xs:complexType name="BorderWidthFoldoutType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OverrideFoldoutType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BorderWidthFoldout" substitutionGroup="tns:OverrideFoldout" type="tns:BorderWidthFoldoutType" />
+  <xs:complexType name="StyleTranslateFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q72="UnityEngine.UIElements" base="q72:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q72:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleTranslateField" xmlns:q73="UnityEngine.UIElements" substitutionGroup="q73:BindableElement" type="tns:StyleTranslateFieldType" />
+  <xs:complexType name="MatchingSelectorsElementType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q74="UnityEngine.UIElements" base="q74:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MatchingSelectorsElement" xmlns:q75="UnityEngine.UIElements" substitutionGroup="q75:VisualElement" type="tns:MatchingSelectorsElementType" />
+  <xs:complexType name="ClassListElementType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q76="UnityEngine.UIElements" base="q76:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClassListElement" xmlns:q77="UnityEngine.UIElements" substitutionGroup="q77:VisualElement" type="tns:ClassListElementType" />
+  <xs:complexType name="UIViewportType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q78="UnityEngine.UIElements" base="q78:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UIViewport" xmlns:q79="UnityEngine.UIElements" substitutionGroup="q79:VisualElement" type="tns:UIViewportType" />
+  <xs:complexType name="CheckerboardBackgroundType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q80="UnityEngine.UIElements" base="q80:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CheckerboardBackground" xmlns:q81="UnityEngine.UIElements" substitutionGroup="q81:VisualElement" type="tns:CheckerboardBackgroundType" />
+  <xs:complexType name="UxmlAttributeFieldDecoratorType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q82="UnityEngine.UIElements" base="q82:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UxmlAttributeFieldDecorator" xmlns:q83="UnityEngine.UIElements" substitutionGroup="q83:VisualElement" type="tns:UxmlAttributeFieldDecoratorType" />
+  <xs:complexType name="VariablesInspectorType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q84="UnityEngine.UIElements" base="q84:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VariablesInspector" xmlns:q85="UnityEngine.UIElements" substitutionGroup="q85:VisualElement" type="tns:VariablesInspectorType" />
+  <xs:complexType name="CanvasSettingsInspectorType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q86="UnityEngine.UIElements" base="q86:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CanvasSettingsInspector" xmlns:q87="UnityEngine.UIElements" substitutionGroup="q87:VisualElement" type="tns:CanvasSettingsInspectorType" />
+  <xs:complexType name="VisibilityStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q88="UnityEngine.UIElements" base="q88:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q88:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="visible" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisibilityStyleEnumField" xmlns:q89="UnityEngine.UIElements" substitutionGroup="q89:BindableElement" type="tns:VisibilityStyleEnumFieldType" />
+  <xs:complexType name="StyleUIAnimationClipFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q90="UnityEngine.UIElements" base="q90:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q90:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleUIAnimationClipField" xmlns:q91="UnityEngine.UIElements" substitutionGroup="q91:BindableElement" type="tns:StyleUIAnimationClipFieldType" />
+  <xs:complexType name="UICanvasType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q92="UnityEngine.UIElements" base="q92:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UICanvas" xmlns:q93="UnityEngine.UIElements" substitutionGroup="q93:VisualElement" type="tns:UICanvasType" />
+  <xs:complexType name="StyleFontFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q94="UnityEngine.UIElements" base="q94:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q94:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleFontField" xmlns:q95="UnityEngine.UIElements" substitutionGroup="q95:BindableElement" type="tns:StyleFontFieldType" />
+  <xs:complexType name="NewSelectorFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q96="UnityEngine.UIElements" base="q96:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewSelectorField" xmlns:q97="UnityEngine.UIElements" substitutionGroup="q97:VisualElement" type="tns:NewSelectorFieldType" />
+  <xs:complexType name="BindingDataSourceViewType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q98="UnityEngine.UIElements" base="q98:BindableElementType">
+        <xs:choice />
+        <xs:attribute default="false" name="binding-editing-mode" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BindingDataSourceView" xmlns:q99="UnityEngine.UIElements" substitutionGroup="q99:BindableElement" type="tns:BindingDataSourceViewType" />
+  <xs:complexType name="TextGeneratorTypeStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q100="UnityEngine.UIElements" base="q100:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q100:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="standard" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextGeneratorTypeStyleEnumField" xmlns:q101="UnityEngine.UIElements" substitutionGroup="q101:BindableElement" type="tns:TextGeneratorTypeStyleEnumFieldType" />
+  <xs:complexType name="StyleSheetsNewSelectorHelpTipsType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q102="UnityEngine.UIElements" base="q102:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleSheetsNewSelectorHelpTips" xmlns:q103="UnityEngine.UIElements" substitutionGroup="q103:VisualElement" type="tns:StyleSheetsNewSelectorHelpTipsType" />
+  <xs:complexType name="VisualElementHeaderType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q104="UnityEngine.UIElements" base="q104:VisualElementType">
+        <xs:choice />
+        <xs:attribute default="project://database/Library/unity%20editor%20resources?fileID=9003140115885502871&amp;guid=0000000000000000d000000000000000&amp;type=0#d_VisualElement@2x" name="type-icon" type="xs:string" />
+        <xs:attribute default="VisualElement" name="type-name" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisualElementHeader" xmlns:q105="UnityEngine.UIElements" substitutionGroup="q105:VisualElement" type="tns:VisualElementHeaderType" />
+  <xs:complexType name="ClassPillType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q106="UnityEngine.UIElements" base="q106:VisualElementType">
+        <xs:choice />
+        <xs:attribute name="text" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClassPill" xmlns:q107="UnityEngine.UIElements" substitutionGroup="q107:VisualElement" type="tns:ClassPillType" />
+  <xs:complexType name="StyleSheetHeaderType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q108="UnityEngine.UIElements" base="q108:VisualElementType">
+        <xs:choice />
+        <xs:attribute default="project://database/Library/unity%20editor%20resources?fileID=5153532147187264368&amp;guid=0000000000000000d000000000000000&amp;type=0#StyleSheet Icon" name="type-icon" type="xs:string" />
+        <xs:attribute default="StyleSheet" name="type-name" type="xs:string" />
+        <xs:attribute name="style-sheet-name" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleSheetHeader" xmlns:q109="UnityEngine.UIElements" substitutionGroup="q109:VisualElement" type="tns:StyleSheetHeaderType" />
+  <xs:complexType name="TextAlignStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q110="UnityEngine.UIElements" base="q110:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q110:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="upperleft" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextAlignStyleEnumField" xmlns:q111="UnityEngine.UIElements" substitutionGroup="q111:BindableElement" type="tns:TextAlignStyleEnumFieldType" />
+  <xs:complexType name="VisualTreeAssetInspectorType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q112="UnityEngine.UIElements" base="q112:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisualTreeAssetInspector" xmlns:q113="UnityEngine.UIElements" substitutionGroup="q113:VisualElement" type="tns:VisualTreeAssetInspectorType" />
+  <xs:complexType name="UIViewportThemeMenuType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q114="UnityEngine.UIElements" base="q114:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UIViewportThemeMenu" xmlns:q115="UnityEngine.UIElements" substitutionGroup="q115:VisualElement" type="tns:UIViewportThemeMenuType" />
+  <xs:complexType name="EditorTextRenderingModeStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q116="UnityEngine.UIElements" base="q116:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q116:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="sdf" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditorTextRenderingModeStyleEnumField" xmlns:q117="UnityEngine.UIElements" substitutionGroup="q117:BindableElement" type="tns:EditorTextRenderingModeStyleEnumFieldType" />
+  <xs:complexType name="NotEditableAssetHelpBoxType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q118="UnityEngine.UIElements" base="q118:HelpBoxType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NotEditableAssetHelpBox" xmlns:q119="UnityEngine.UIElements" substitutionGroup="q119:HelpBox" type="tns:NotEditableAssetHelpBoxType" />
+  <xs:complexType name="StyleRuleInspectorType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q120="UnityEngine.UIElements" base="q120:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleRuleInspector" xmlns:q121="UnityEngine.UIElements" substitutionGroup="q121:VisualElement" type="tns:StyleRuleInspectorType" />
+  <xs:complexType name="StyleTransformOriginFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q122="UnityEngine.UIElements" base="q122:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q122:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="top left" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleTransformOriginField" xmlns:q123="UnityEngine.UIElements" substitutionGroup="q123:BindableElement" type="tns:StyleTransformOriginFieldType" />
+  <xs:complexType name="CanvasSettingsHeaderType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q124="UnityEngine.UIElements" base="q124:VisualElementType">
+        <xs:choice />
+        <xs:attribute default="none" name="type-icon" type="xs:string" />
+        <xs:attribute name="type-name" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CanvasSettingsHeader" xmlns:q125="UnityEngine.UIElements" substitutionGroup="q125:VisualElement" type="tns:CanvasSettingsHeaderType" />
+  <xs:complexType name="FontStyleToggleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q126="UnityEngine.UIElements" base="q126:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="Normal" name="value" xmlns:q127="UnityEngine" type="q127:FontStyleType" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FontStyleToggleField" xmlns:q128="UnityEngine.UIElements" substitutionGroup="q128:BindableElement" type="tns:FontStyleToggleFieldType" />
+  <xs:complexType name="TextOverflowStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q129="UnityEngine.UIElements" base="q129:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q129:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="clip" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextOverflowStyleEnumField" xmlns:q130="UnityEngine.UIElements" substitutionGroup="q130:BindableElement" type="tns:TextOverflowStyleEnumFieldType" />
+  <xs:complexType name="CompositeStyleRowType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q131="UnityEngine.UIElements" base="q131:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompositeStyleRow" xmlns:q132="UnityEngine.UIElements" substitutionGroup="q132:BindableElement" type="tns:CompositeStyleRowType" />
+  <xs:complexType name="AnimationPlayStateStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q133="UnityEngine.UIElements" base="q133:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q133:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="running" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnimationPlayStateStyleEnumField" xmlns:q134="UnityEngine.UIElements" substitutionGroup="q134:BindableElement" type="tns:AnimationPlayStateStyleEnumFieldType" />
+  <xs:complexType name="StyleCursorFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q135="UnityEngine.UIElements" base="q135:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q135:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default=" 0 0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleCursorField" xmlns:q136="UnityEngine.UIElements" substitutionGroup="q136:BindableElement" type="tns:StyleCursorFieldType" />
+  <xs:complexType name="VisualTreeAssetHeaderType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q137="UnityEngine.UIElements" base="q137:VisualElementType">
+        <xs:choice />
+        <xs:attribute default="project://database/Library/unity%20editor%20resources?fileID=-6669975721763037463&amp;guid=0000000000000000d000000000000000&amp;type=0#d_TemplateContainer@2x" name="type-icon" type="xs:string" />
+        <xs:attribute default="VisualTreeAsset" name="type-name" type="xs:string" />
+        <xs:attribute name="visual-tree-asset" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisualTreeAssetHeader" xmlns:q138="UnityEngine.UIElements" substitutionGroup="q138:VisualElement" type="tns:VisualTreeAssetHeaderType" />
+  <xs:complexType name="VisualElementInspectorType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q139="UnityEngine.UIElements" base="q139:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisualElementInspector" xmlns:q140="UnityEngine.UIElements" substitutionGroup="q140:VisualElement" type="tns:VisualElementInspectorType" />
+  <xs:complexType name="UICanvasResizerHandleType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q141="UnityEngine.UIElements" base="q141:VisualElementType">
+        <xs:choice />
+        <xs:attribute default="Top" name="position" type="tns:UICanvasResizerHandle_AnchorType" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="UICanvasResizerHandle_AnchorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Top" />
+      <xs:enumeration value="TopRight" />
+      <xs:enumeration value="Right" />
+      <xs:enumeration value="BottomRight" />
+      <xs:enumeration value="Bottom" />
+      <xs:enumeration value="BottomLeft" />
+      <xs:enumeration value="Left" />
+      <xs:enumeration value="TopLeft" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UICanvasResizerHandle" xmlns:q142="UnityEngine.UIElements" substitutionGroup="q142:VisualElement" type="tns:UICanvasResizerHandleType" />
+  <xs:complexType name="StyleTextAutoSizeFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q143="UnityEngine.UIElements" base="q143:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q143:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleTextAutoSizeField" xmlns:q144="UnityEngine.UIElements" substitutionGroup="q144:BindableElement" type="tns:StyleTextAutoSizeFieldType" />
+  <xs:complexType name="StylePropertyBindingType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element xmlns:q145="UnityEngine.UIElements" ref="q145:VisualElement" />
+      <xs:element minOccurs="0" form="unqualified" name="Style" xmlns:q146="UnityEngine.UIElements" type="q146:StyleType" />
+      <xs:element minOccurs="0" form="unqualified" name="Template" xmlns:q147="UnityEngine.UIElements" type="q147:TemplateType" />
+      <xs:element minOccurs="0" form="unqualified" name="AttributeOverrides" xmlns:q148="UnityEngine.UIElements" type="q148:AttributeOverridesType" />
+    </xs:choice>
+    <xs:attribute name="property" type="xs:string" />
+    <xs:attribute default="OnSourceChanged" name="update-trigger" xmlns:q149="UnityEngine.UIElements" type="q149:BindingUpdateTriggerType" />
+    <xs:attribute name="style-property" type="xs:string" />
+    <xs:anyAttribute processContents="lax" />
+  </xs:complexType>
+  <xs:element name="StylePropertyBinding" type="tns:StylePropertyBindingType" />
+  <xs:complexType name="TextOverflowPositionStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q150="UnityEngine.UIElements" base="q150:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q150:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="end" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextOverflowPositionStyleEnumField" xmlns:q151="UnityEngine.UIElements" substitutionGroup="q151:BindableElement" type="tns:TextOverflowPositionStyleEnumFieldType" />
+  <xs:complexType name="FlexDirectionStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q152="UnityEngine.UIElements" base="q152:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q152:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="column" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FlexDirectionStyleEnumField" xmlns:q153="UnityEngine.UIElements" substitutionGroup="q153:BindableElement" type="tns:FlexDirectionStyleEnumFieldType" />
+  <xs:complexType name="StyleSheetInspectorType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q154="UnityEngine.UIElements" base="q154:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleSheetInspector" xmlns:q155="UnityEngine.UIElements" substitutionGroup="q155:VisualElement" type="tns:StyleSheetInspectorType" />
+  <xs:complexType name="AlignStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q156="UnityEngine.UIElements" base="q156:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q156:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="auto" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+        <xs:attribute name="auto-tooltip" type="xs:string" />
+        <xs:attribute name="flex-start-tooltip" type="xs:string" />
+        <xs:attribute name="center-tooltip" type="xs:string" />
+        <xs:attribute name="flex-end-tooltip" type="xs:string" />
+        <xs:attribute name="stretch-tooltip" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlignStyleEnumField" xmlns:q157="UnityEngine.UIElements" substitutionGroup="q157:BindableElement" type="tns:AlignStyleEnumFieldType" />
+  <xs:complexType name="StyleBackgroundSizeFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q158="UnityEngine.UIElements" base="q158:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q158:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0 0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleBackgroundSizeField" xmlns:q159="UnityEngine.UIElements" substitutionGroup="q159:BindableElement" type="tns:StyleBackgroundSizeFieldType" />
+  <xs:complexType name="StyleRotateFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q160="UnityEngine.UIElements" base="q160:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q160:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0 0 0 0" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleRotateField" xmlns:q161="UnityEngine.UIElements" substitutionGroup="q161:BindableElement" type="tns:StyleRotateFieldType" />
+  <xs:complexType name="TextAutoSizeStyleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q162="UnityEngine.UIElements" base="q162:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextAutoSizeStyleField" xmlns:q163="UnityEngine.UIElements" substitutionGroup="q163:BindableElement" type="tns:TextAutoSizeStyleFieldType" />
+  <xs:complexType name="WhiteSpaceStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q164="UnityEngine.UIElements" base="q164:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q164:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="normal" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WhiteSpaceStyleEnumField" xmlns:q165="UnityEngine.UIElements" substitutionGroup="q165:BindableElement" type="tns:WhiteSpaceStyleEnumFieldType" />
+  <xs:complexType name="BorderColorFoldoutType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OverrideFoldoutType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BorderColorFoldout" substitutionGroup="tns:OverrideFoldout" type="tns:BorderColorFoldoutType" />
+  <xs:complexType name="TransformOriginStyleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q166="UnityEngine.UIElements" base="q166:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="top left" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransformOriginStyleField" xmlns:q167="UnityEngine.UIElements" substitutionGroup="q167:BindableElement" type="tns:TransformOriginStyleFieldType" />
+  <xs:complexType name="FieldAffordanceElementType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q168="UnityEngine.UIElements" base="q168:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FieldAffordanceElement" xmlns:q169="UnityEngine.UIElements" substitutionGroup="q169:VisualElement" type="tns:FieldAffordanceElementType" />
+  <xs:complexType name="InspectorSearchFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q170="UnityEngine.UIElements" base="q170:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InspectorSearchField" xmlns:q171="UnityEngine.UIElements" substitutionGroup="q171:VisualElement" type="tns:InspectorSearchFieldType" />
+  <xs:complexType name="SpacingBoxModelType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q172="UnityEngine.UIElements" base="q172:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SpacingBoxModel" xmlns:q173="UnityEngine.UIElements" substitutionGroup="q173:VisualElement" type="tns:SpacingBoxModelType" />
+  <xs:complexType name="OverflowStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q174="UnityEngine.UIElements" base="q174:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q174:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="visible" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OverflowStyleEnumField" xmlns:q175="UnityEngine.UIElements" substitutionGroup="q175:BindableElement" type="tns:OverflowStyleEnumFieldType" />
+  <xs:complexType name="BackgroundRepeatStyleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q176="UnityEngine.UIElements" base="q176:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="no-repeat" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BackgroundRepeatStyleField" xmlns:q177="UnityEngine.UIElements" substitutionGroup="q177:BindableElement" type="tns:BackgroundRepeatStyleFieldType" />
+  <xs:complexType name="BorderRadiusFoldoutType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OverrideFoldoutType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BorderRadiusFoldout" substitutionGroup="tns:OverrideFoldout" type="tns:BorderRadiusFoldoutType" />
+  <xs:complexType name="StyleBackgroundRepeatFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q178="UnityEngine.UIElements" base="q178:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q178:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="no-repeat" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleBackgroundRepeatField" xmlns:q179="UnityEngine.UIElements" substitutionGroup="q179:BindableElement" type="tns:StyleBackgroundRepeatFieldType" />
+  <xs:complexType name="PopupType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q180="UnityEngine.UIElements" base="q180:VisualElementType">
+        <xs:choice />
+        <xs:attribute default="false" name="uses-real-window" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Popup" xmlns:q181="UnityEngine.UIElements" substitutionGroup="q181:VisualElement" type="tns:PopupType" />
+  <xs:complexType name="FontStyleStyleEnumFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q182="UnityEngine.UIElements" base="q182:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q182:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="normal" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FontStyleStyleEnumField" xmlns:q183="UnityEngine.UIElements" substitutionGroup="q183:BindableElement" type="tns:FontStyleStyleEnumFieldType" />
+  <xs:complexType name="StyleFilterFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q184="UnityEngine.UIElements" base="q184:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q184:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleFilterField" xmlns:q185="UnityEngine.UIElements" substitutionGroup="q185:BindableElement" type="tns:StyleFilterFieldType" />
+  <xs:complexType name="StyleBackgroundPositionFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q186="UnityEngine.UIElements" base="q186:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q186:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="center" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleBackgroundPositionField" xmlns:q187="UnityEngine.UIElements" substitutionGroup="q187:BindableElement" type="tns:StyleBackgroundPositionFieldType" />
+  <xs:complexType name="UxmlCodePreviewType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q188="UnityEngine.UIElements" base="q188:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UxmlCodePreview" xmlns:q189="UnityEngine.UIElements" substitutionGroup="q189:VisualElement" type="tns:UxmlCodePreviewType" />
+  <xs:complexType name="StyleColorFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q190="UnityEngine.UIElements" base="q190:BindableElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="q190:Syntax" />
+        </xs:choice>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="rgba(0, 0, 0, 0)" name="value" type="xs:string" />
+        <xs:attribute default="true" name="contains-affordance" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StyleColorField" xmlns:q191="UnityEngine.UIElements" substitutionGroup="q191:BindableElement" type="tns:StyleColorFieldType" />
+  <xs:complexType name="PositionAnchorsType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q192="UnityEngine.UIElements" base="q192:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PositionAnchors" xmlns:q193="UnityEngine.UIElements" substitutionGroup="q193:VisualElement" type="tns:PositionAnchorsType" />
+  <xs:complexType name="PaddingFoldoutFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OverrideFoldoutType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PaddingFoldoutField" substitutionGroup="tns:OverrideFoldout" type="tns:PaddingFoldoutFieldType" />
+  <xs:complexType name="VisualElementAttributesInspectorElementType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q194="UnityEngine.UIElements" base="q194:VisualElementType">
+        <xs:choice />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisualElementAttributesInspectorElement" xmlns:q195="UnityEngine.UIElements" substitutionGroup="q195:VisualElement" type="tns:VisualElementAttributesInspectorElementType" />
+  <xs:complexType name="BackgroundSizeStyleFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q196="UnityEngine.UIElements" base="q196:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0 0" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BackgroundSizeStyleField" xmlns:q197="UnityEngine.UIElements" substitutionGroup="q197:BindableElement" type="tns:BackgroundSizeStyleFieldType" />
+  <xs:complexType name="TextShadowFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q198="UnityEngine.UIElements" base="q198:BindableElementType">
+        <xs:choice />
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0px 0px rgba(0, 0, 0, 0)" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextShadowField" xmlns:q199="UnityEngine.UIElements" substitutionGroup="q199:BindableElement" type="tns:TextShadowFieldType" />
+</xs:schema>
