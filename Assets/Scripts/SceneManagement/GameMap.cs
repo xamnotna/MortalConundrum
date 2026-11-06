@@ -19,6 +19,7 @@ public class GameMap : MonoBehaviour
     [SerializeField] private string[] scenesWithInactiveMap;
     [Header("Map unavailable message")]
     [SerializeField] private TMP_Text mapUnavailableMessageText;
+    [SerializeField] private Image mapUnavailableMessageBackgroundImage;
     [SerializeField] private string mapUnavailableMessage = "There is no map available.";
     [SerializeField] private float messageFadeDuration = 0.35f;
     [SerializeField] private float messageVisibleDuration = 2f;
@@ -34,6 +35,8 @@ public class GameMap : MonoBehaviour
     private bool isMapEnabledInCurrentScene = true;
     private Coroutine mapUnavailableMessageCoroutine;
     private bool hasLoggedMissingMessageTextReference;
+    private Color mapUnavailableMessageBaseColor = Color.white;
+    private Color mapUnavailableBackgroundBaseColor = Color.white;
 
     //Vector2 playerPosition;
 
@@ -56,6 +59,7 @@ public class GameMap : MonoBehaviour
             Destroy(gameObject);
         }
 
+        CacheMapUnavailableMessageVisualDefaults();
         HideMapUnavailableMessageInstant();
     }
 
@@ -206,6 +210,10 @@ public class GameMap : MonoBehaviour
     {
         SetMapUnavailableMessageAlpha(0f);
         mapUnavailableMessageText.gameObject.SetActive(true);
+        if (mapUnavailableMessageBackgroundImage != null)
+        {
+            mapUnavailableMessageBackgroundImage.gameObject.SetActive(true);
+        }
         mapUnavailableMessageText.text = mapUnavailableMessage;
 
         yield return FadeMapUnavailableMessage(0f, 1f, messageFadeDuration);
@@ -213,6 +221,10 @@ public class GameMap : MonoBehaviour
         yield return FadeMapUnavailableMessage(1f, 0f, messageFadeDuration);
 
         mapUnavailableMessageText.gameObject.SetActive(false);
+        if (mapUnavailableMessageBackgroundImage != null)
+        {
+            mapUnavailableMessageBackgroundImage.gameObject.SetActive(false);
+        }
         mapUnavailableMessageCoroutine = null;
     }
 
@@ -238,9 +250,18 @@ public class GameMap : MonoBehaviour
 
     private void SetMapUnavailableMessageAlpha(float alpha)
     {
-        Color color = mapUnavailableMessageText.color;
+        Color color = mapUnavailableMessageBaseColor;
         color.a = alpha;
         mapUnavailableMessageText.color = color;
+
+        if (mapUnavailableMessageBackgroundImage == null)
+        {
+            return;
+        }
+
+        Color backgroundColor = mapUnavailableBackgroundBaseColor;
+        backgroundColor.a = alpha;
+        mapUnavailableMessageBackgroundImage.color = backgroundColor;
     }
 
     private void HideMapUnavailableMessageInstant()
@@ -252,6 +273,23 @@ public class GameMap : MonoBehaviour
 
         SetMapUnavailableMessageAlpha(0f);
         mapUnavailableMessageText.gameObject.SetActive(false);
+        if (mapUnavailableMessageBackgroundImage != null)
+        {
+            mapUnavailableMessageBackgroundImage.gameObject.SetActive(false);
+        }
+    }
+
+    private void CacheMapUnavailableMessageVisualDefaults()
+    {
+        if (mapUnavailableMessageText != null)
+        {
+            mapUnavailableMessageBaseColor = mapUnavailableMessageText.color;
+        }
+
+        if (mapUnavailableMessageBackgroundImage != null)
+        {
+            mapUnavailableBackgroundBaseColor = mapUnavailableMessageBackgroundImage.color;
+        }
     }
 
     public void StationPressed(string stationName)
