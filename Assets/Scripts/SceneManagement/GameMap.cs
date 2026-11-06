@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -14,6 +15,9 @@ public class GameMap : MonoBehaviour
     [Header("Stations")]
     [SerializeField] private GameObject[] stations;
 
+    [Header("Map availability")]
+    [SerializeField] private string[] scenesWithInactiveMap;
+
     // add gameobject OnClickSetPos to the button in the inspector
     private OnClickSetPos onClickSetPos;
 
@@ -22,6 +26,7 @@ public class GameMap : MonoBehaviour
 
     // station pressed by player string name
     private string stationPressed;
+    private bool isMapEnabledInCurrentScene = true;
 
     //Vector2 playerPosition;
 
@@ -52,13 +57,46 @@ public class GameMap : MonoBehaviour
 
     private void Start()
     {
+        isMapEnabledInCurrentScene = IsMapEnabledForScene(SceneManager.GetActiveScene().name);
         StationSelectPanel.SetActive(false);
+    }
 
+    private bool IsMapEnabledForScene(string sceneName)
+    {
+        if (scenesWithInactiveMap == null || scenesWithInactiveMap.Length == 0)
+        {
+            return true;
+        }
 
+        for (int i = 0; i < scenesWithInactiveMap.Length; i++)
+        {
+            string inactiveSceneName = scenesWithInactiveMap[i];
+            if (string.IsNullOrWhiteSpace(inactiveSceneName))
+            {
+                continue;
+            }
+
+            if (string.Equals(inactiveSceneName.Trim(), sceneName, StringComparison.OrdinalIgnoreCase))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private void Update()
     {
+        if (!isMapEnabledInCurrentScene)
+        {
+            if (StationSelectPanel.activeSelf)
+            {
+                StationSelectPanel.SetActive(false);
+            }
+
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.M) && !StationSelectPanel.activeSelf)
         {
             StationSelectPanel.SetActive(true);
@@ -159,5 +197,3 @@ public class GameMap : MonoBehaviour
 
 
 }
-
-
