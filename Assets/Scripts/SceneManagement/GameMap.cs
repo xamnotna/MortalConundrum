@@ -33,6 +33,7 @@ public class GameMap : MonoBehaviour
     private string stationPressed;
     private bool isMapEnabledInCurrentScene = true;
     private Coroutine mapUnavailableMessageCoroutine;
+    private bool hasLoggedMissingMessageTextReference;
 
     //Vector2 playerPosition;
 
@@ -54,6 +55,8 @@ public class GameMap : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        HideMapUnavailableMessageInstant();
     }
 
     public static GameMap GetInstance()
@@ -65,6 +68,17 @@ public class GameMap : MonoBehaviour
     {
         isMapEnabledInCurrentScene = IsMapEnabledForScene(SceneManager.GetActiveScene().name);
         StationSelectPanel.SetActive(false);
+        HideMapUnavailableMessageInstant();
+    }
+
+    private void OnDisable()
+    {
+        if (mapUnavailableMessageCoroutine != null)
+        {
+            StopCoroutine(mapUnavailableMessageCoroutine);
+            mapUnavailableMessageCoroutine = null;
+        }
+
         HideMapUnavailableMessageInstant();
     }
 
@@ -168,70 +182,77 @@ public class GameMap : MonoBehaviour
     }
 
     private void ShowMapUnavailableMessage()
+    {
+        if (mapUnavailableMessageText == null)
         {
-            if (mapUnavailableMessageText == null)
+            if (!hasLoggedMissingMessageTextReference)
             {
-                return;
+                Debug.LogWarning("GameMap: 'Map Unavailable Message Text' is not assigned.", this);
+                hasLoggedMissingMessageTextReference = true;
             }
 
-            if (mapUnavailableMessageCoroutine != null)
-            {
-                StopCoroutine(mapUnavailableMessageCoroutine);
-            }
-
-            mapUnavailableMessageCoroutine = StartCoroutine(ShowMapUnavailableMessageRoutine());
+            return;
         }
 
-        private IEnumerator ShowMapUnavailableMessageRoutine()
+        if (mapUnavailableMessageCoroutine != null)
         {
-            mapUnavailableMessageText.gameObject.SetActive(true);
-            mapUnavailableMessageText.text = mapUnavailableMessage;
-
-            yield return FadeMapUnavailableMessage(0f, 1f, messageFadeDuration);
-            yield return new WaitForSeconds(messageVisibleDuration);
-            yield return FadeMapUnavailableMessage(1f, 0f, messageFadeDuration);
-
-            mapUnavailableMessageText.gameObject.SetActive(false);
-            mapUnavailableMessageCoroutine = null;
+            StopCoroutine(mapUnavailableMessageCoroutine);
         }
 
-        private IEnumerator FadeMapUnavailableMessage(float fromAlpha, float toAlpha, float duration)
+        mapUnavailableMessageCoroutine = StartCoroutine(ShowMapUnavailableMessageRoutine());
+    }
+
+    private IEnumerator ShowMapUnavailableMessageRoutine()
+    {
+        SetMapUnavailableMessageAlpha(0f);
+        mapUnavailableMessageText.gameObject.SetActive(true);
+        mapUnavailableMessageText.text = mapUnavailableMessage;
+
+        yield return FadeMapUnavailableMessage(0f, 1f, messageFadeDuration);
+        yield return new WaitForSeconds(messageVisibleDuration);
+        yield return FadeMapUnavailableMessage(1f, 0f, messageFadeDuration);
+
+        mapUnavailableMessageText.gameObject.SetActive(false);
+        mapUnavailableMessageCoroutine = null;
+    }
+
+    private IEnumerator FadeMapUnavailableMessage(float fromAlpha, float toAlpha, float duration)
+    {
+        if (duration <= 0f)
         {
-            if (duration <= 0f)
-            {
-                SetMapUnavailableMessageAlpha(toAlpha);
-                yield break;
-            }
-
-            float elapsed = 0f;
-            while (elapsed < duration)
-            {
-                elapsed += Time.deltaTime;
-                float t = Mathf.Clamp01(elapsed / duration);
-                SetMapUnavailableMessageAlpha(Mathf.Lerp(fromAlpha, toAlpha, t));
-                yield return null;
-            }
-
             SetMapUnavailableMessageAlpha(toAlpha);
+            yield break;
         }
 
-        private void SetMapUnavailableMessageAlpha(float alpha)
+        float elapsed = 0f;
+        while (elapsed < duration)
         {
-            Color color = mapUnavailableMessageText.color;
-            color.a = alpha;
-            mapUnavailableMessageText.color = color;
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            SetMapUnavailableMessageAlpha(Mathf.Lerp(fromAlpha, toAlpha, t));
+            yield return null;
         }
 
-        private void HideMapUnavailableMessageInstant()
+        SetMapUnavailableMessageAlpha(toAlpha);
+    }
+
+    private void SetMapUnavailableMessageAlpha(float alpha)
+    {
+        Color color = mapUnavailableMessageText.color;
+        color.a = alpha;
+        mapUnavailableMessageText.color = color;
+    }
+
+    private void HideMapUnavailableMessageInstant()
+    {
+        if (mapUnavailableMessageText == null)
         {
-            if (mapUnavailableMessageText == null)
-            {
-                return;
-            }
-
-            SetMapUnavailableMessageAlpha(0f);
-            mapUnavailableMessageText.gameObject.SetActive(false);
+            return;
         }
+
+        SetMapUnavailableMessageAlpha(0f);
+        mapUnavailableMessageText.gameObject.SetActive(false);
+    }
 
     public void StationPressed(string stationName)
     {
