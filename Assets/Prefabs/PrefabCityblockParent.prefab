@@ -286,6 +286,10 @@ PrefabInstance:
       propertyPath: 'stations.Array.data[4]'
       value: 
       objectReference: {fileID: 6649507797694926546}
+    - target: {fileID: 6125725685515691231, guid: 37b11deb425bf5341b8646b95bc08283, type: 3}
+      propertyPath: sceneOverrides.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8199829093964701069, guid: 37b11deb425bf5341b8646b95bc08283, type: 3}
       propertyPath: m_Name
       value: Managers
